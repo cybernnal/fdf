@@ -9,16 +9,16 @@ static void key_handler(SDL_Event event, t_env *env)
 			exit(EXIT_SUCCESS);
         if (event.key.keysym.sym == SDLK_z)
             env->zoom += 12;
-        if (event.key.keysym.sym == SDLK_a && env->zoom >= 12)
+        if (event.key.keysym.sym == SDLK_a)// && env->zoom >= 12)
             env->zoom -= 12;
         if (event.key.keysym.sym == SDLK_LEFT && env->xmin >= 4)
         {
-          //  env->xmin -= 4;
+            env->xmin -= 4;
             env->xmax -= 4;
         }
         if (event.key.keysym.sym == SDLK_RIGHT && env->xmax <= env->mod - 4)
         {
-           // env->xmin += 4;
+            env->xmin += 4;
             env->xmax += 4;
         }
         if (event.key.keysym.sym == SDLK_DOWN && env->ymax <= env->line - 4)
@@ -78,7 +78,7 @@ static void line(int x0, int y0, int x1, int y1, t_window *w, t_env *e)
     int e2;
     Uint32 color;
 
-    color = map_color(e);
+    color = terra_color(e);
     dx = abs(x1-x0);
     sx = x0 < x1 ? 1 : -1;
     dy = abs(y1-y0);
@@ -106,17 +106,17 @@ static void line(int x0, int y0, int x1, int y1, t_window *w, t_env *e)
 static void     zoom(t_env *env)
 {
     int     step;
-    static int zoom = 0;
+    static int zoom = -42;
 
-    if (zoom == 0)
+    if (zoom == -42)
         zoom = env->zoom;
     if (zoom != env->zoom)
     {
         step = env->zoom - zoom;
         env->ymin += step;
         env->ymax -= step;
-        env->xmin += step * 1.5;// * 2 ;//L_C(step, 0, WIN_HEIGHT, 0, WIN_WIDTH);
-        env->xmax -= step * 1.5;// * 2 ;//L_C(step, 0, WIN_HEIGHT, 0, WIN_WIDTH);
+        env->xmin += step;// * 2 ;//L_C(step, 0, WIN_HEIGHT, 0, WIN_WIDTH);
+        env->xmax -= step;// * 2 ;//L_C(step, 0, WIN_HEIGHT, 0, WIN_WIDTH);
         zoom = env->zoom;
     }
 }
@@ -124,24 +124,22 @@ static void     zoom(t_env *env)
 static void		render_map(t_window *w, t_env *env)
 {
     int m;
-
+    
     m = 0;
     zoom(env);
 	env->i = env->xmin + (env->ymin * env->mod);
-    while (env->i < env->xmax * env->ymax)
+    while (env->i < env->mod * env->line)
 	{
         env->down = env->tab[env->i];
         if (env->i > 0)
             env->up = env->tab[env->i - 1];
-        if (env->i % env->mod != env->mod - 1)
-            line(L_C(env->i % env->mod, env->xmin, env->xmax, m, WIN_WIDTH - m), L_C(env->i / env->mod, env->ymin, env->ymax, m, WIN_HEIGHT - m), L_C((env->i + 1) % env->mod, env->xmin, env->xmax, m, WIN_WIDTH - m), L_C((env->i + 1) / env->mod, env->ymin, env->ymax, m, WIN_HEIGHT - m), w, env);
-        if (env->i + env->mod < env->line * env->mod)
-            line(L_C(env->i % env->mod, env->xmin, env->xmax, m, WIN_WIDTH - m), L_C(env->i / env->mod, env->ymin, env->ymax, m, WIN_HEIGHT - m), L_C((env->i) % env->mod, env->xmin, env->xmax, m, WIN_WIDTH - m), L_C((env->i + env->mod) / env->mod, env->ymin, env->ymax, m, WIN_HEIGHT - m), w, env);
+        if (env->i % env->mod != env->mod - 1 && (env->i % env->mod) > env->xmin && (env->i % env->mod) < env->xmax && env->i / env->mod > env->ymin && env->i / env->mod < env->ymax)
+            line(L_C(env->i % (env->mod), env->xmin, env->xmax, m, WIN_HEIGHT), L_C(env->i / (env->mod), env->ymin, env->ymax, m, WIN_HEIGHT - m), L_C((env->i + 1) % (env->mod), env->xmin, env->xmax, m, WIN_HEIGHT), L_C((env->i + 1) / (env->mod), env->ymin, env->ymax, m, WIN_HEIGHT - m), w, env);
+        if (env->i + env->mod < env->line * env->mod && (env->i % env->mod) > env->xmin && (env->i % env->mod) < env->xmax && env->i / env->mod > env->ymin && env->i / env->mod < env->ymax)
+            line(L_C(env->i % (env->mod), env->xmin, env->xmax, m, WIN_HEIGHT), L_C(env->i / (env->mod), env->ymin, env->ymax, m, WIN_HEIGHT - m), L_C((env->i) % (env->mod), env->xmin, env->xmax, m, WIN_HEIGHT), L_C((env->i + env->mod) / (env->mod), env->ymin, env->ymax, m, WIN_HEIGHT - m), w, env);
         ++env->i;
         if (env->i % env->mod >= env->xmax)
-        {
             env->i += env->mod - (env->i % env->mod);
-        }
         if (env->i % env->mod < env->xmin)
             env->i += env->xmin;
     }

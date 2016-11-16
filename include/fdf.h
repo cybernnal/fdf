@@ -17,7 +17,7 @@
 #include <errno.h>
 
 #include "SDL2/SDL.h"
-#define WIN_WIDTH   1700
+#define WIN_WIDTH   1100
 #define WIN_HEIGHT  1100
 
 typedef struct                  s_window
