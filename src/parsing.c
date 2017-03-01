@@ -43,8 +43,8 @@ void        pars_map(t_env *env, char *arg)
             ft_error("read error");
         i++;
     }
-    env->map[i] = NULL;
     if ((close(fd)) != 0)
         ft_error("close fd error");
-    c_to_d(env);
+    env->map[i] = NULL;
+    c_to_d(env, i);
 }
