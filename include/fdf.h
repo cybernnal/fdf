@@ -59,6 +59,16 @@ typedef struct      s_trace
     float           rot;
 }                   t_trace;
 
+typedef struct      s_color
+{
+    int             r1;
+    int             r2;
+    int             g1;
+    int             g2;
+    int             b1;
+    int             b2;
+}                   t_color;
+
 typedef struct		s_env
 {
 	char			**map;
@@ -69,16 +79,13 @@ typedef struct		s_env
 	int				mod;
 	int 			i;
     float           rzoom;
-    int             xmin;
     int             xmax;
-	int             ymin;
 	int             ymax;
     int             winx;
     int             winy;
     float           rot;
     float           mrot;
     float           ratio;
-    float           coefz;
     int             anim;
     int             anim2;
     double          rad;
@@ -86,14 +93,16 @@ typedef struct		s_env
     int             col;
     float           cz;
     int             t;
+	int				matrix;
     int             config;
     t_fdf             min;
     t_fdf             max;
     t_fdf             up;
-    t_fdf             down;
+    t_color          color;
 }					t_env;
 
-void              init_window2(t_window *window);
+void    			init_env(t_env *env);
+void    			init_env_step2(t_env *env);
 void               init_window(t_window *window);
 int                render(t_env *env);
 void                pars_map(t_env *env, char *arg);
