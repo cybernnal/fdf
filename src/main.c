@@ -53,6 +53,18 @@ int		main(int argc, char  **argv)
     pars_map(&env, argv[1]);
     init_env_step2(&env);
     printf("r: %f, xm :%d ym: %d\n", env.ratio, env.xmax, env.ymax);
-    while (render(&env));
+    init_window(env.w);
+
+
+    ft_putendl("debug 1");
+
+    mlx_expose_hook(env.w->win, render, &env);
+
+    ft_putendl("debug 2");
+
+    mlx_loop(env.w->mlx);
+
+    ft_putendl("debug 5");
+//    render(&env);
 	return (0);
 }

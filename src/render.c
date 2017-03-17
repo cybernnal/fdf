@@ -94,18 +94,18 @@ static void key_handler(SDL_Event event, t_env *env)
     }
 }
 
-static void draw_pixel(int x, int y, Uint32 color, t_window *w)
+void		draw_pixel(char *buf, int x, int y, Uint32 color)
 {
-    if ((y > WIN_Y || x > WIN_X || x < 0 || y < 0))
+    if (x > 0 && x < WIN_X && y > 0 && y < WIN_Y)
     {
-       //ft_putendl("pixel over/under flow");
-        return ;
+        x *= 4;
+        y *= 4;
+        buf[(x++) + (y * WIN_X)] = (char)(color << 24 >> 24);
+        buf[(x++) + (y * WIN_X)] = (char)(color << 16 >> 16);
+        buf[(x) + (y * WIN_X)] = (char)(color >> 16);
     }
-        w->img_ptr[WIN_X * y + x] = color;
-//    SDL_UpdateTexture(w->image, NULL, w->img_ptr, WIN_X * sizeof(Uint32));
-//    SDL_RenderCopy(w->renderer, w->image, NULL, NULL);
-//    SDL_RenderPresent(w->renderer);
 }
+
 
 static Uint32		terra_color(t_env *e)
 {
@@ -197,7 +197,7 @@ static void		ft_tab_ft_init(Uint32 (**tab_ft)(t_env *))
     tab_ft[3] = &custom_color;
 }
 
-static void line(int x0, int y0, int x1, int y1, t_window *w, t_env *e)
+static void line(int x0, int y0, int x1, int y1, t_img *w, t_env *e)
 {
 
 	int dx;
@@ -226,7 +226,7 @@ static void line(int x0, int y0, int x1, int y1, t_window *w, t_env *e)
     err = (dx > dy ? dx : -dy) / 2;
     while (1)
     {
-        draw_pixel(x0, y0, color, w);
+        draw_pixel(w->buf, x0, y0, color);
 		if (x0 == x1 && y0 == y1)
             break;
 		e2 = err;
@@ -301,11 +301,16 @@ static void		ft_matrix_ft_init(void (**tab_ft)(t_trace *, t_env *))
     tab_ft[0] = &matrix2;
 }
 
-static void		render_map(t_window *w, t_env *env)
+static void		render_map(t_img *w, t_env *env)
 {
     t_trace     t;
     static void    (*t_matrix[4])(t_trace *, t_env *) = {NULL};
-
+    w->buf = mlx_get_data_addr(
+            w->data,
+            &w->bpp,
+            &w->size,
+            &w->endian);
+    //ft_bzero(w->data, sizeof(void*) * WIN_Y * WIN_X);
     if (!t_matrix[0])
         ft_matrix_ft_init(t_matrix);
     ft_bzero(&t, sizeof(t_trace));
@@ -366,98 +371,94 @@ static void		render_map(t_window *w, t_env *env)
     }
   }
 
-static void line2(int x0, int y0, int x1, int y1, t_window *w)
-{
+//static void line2(int x0, int y0, int x1, int y1, t_window *w)
+//{
+//
+//    int dx;
+//    int sx;
+//    int dy;
+//    int sy;
+//    int err;
+//    int e2;
+//    Uint32 color;
+//
+//    if ((y0 > WIN_Y || x0 > WIN_X || x0 < 0 || y0 < 0 || y1 > WIN_Y || x1 > WIN_X || x1 < 0 || y1 < 0))
+//    {
+//        ft_putendl("pixel over/under flow on config window");
+//        return ;
+//    }
+//    color = 0xc3a76b;
+//    dx = abs(x1-x0);
+//    sx = x0 < x1 ? 1 : -1;
+//    dy = abs(y1-y0);
+//    sy = y0 <y1 ? 1 : -1;
+//    err = (dx > dy ? dx : -dy) / 2;
+//    while (1)
+//    {
+//        draw_pixel(x0, y0, color, w);
+//        if (x0 == x1 && y0 == y1)
+//            break;
+//        e2 = err;
+//        if (e2 > -dx)
+//        {
+//            err -= dy;
+//            x0 += sx;
+//        }
+//        if (e2 < dy)
+//        {
+//            err += dx;
+//            y0 += sy;
+//        }
+//    }
+//}
 
-    int dx;
-    int sx;
-    int dy;
-    int sy;
-    int err;
-    int e2;
-    Uint32 color;
+//static void draw_curs(int x, int y, t_window *w)
+//{
+//    int sx0 = 2;
+//    int sy0 = 15;
+//    int sx = sx0 / 2;
+//    int sy = sy0 / 2;
+//    while (sy > -(sy0 / 2))
+//    {
+//        while (sx > -(sy0 / 2))
+//        {
+//            draw_pixel((x + sx), (y + sy), 0x0000CC, w);
+//            --sx;
+//        }
+//        sx = sx0 / 2;
+//        --sy;
+//    }
+//}
+//
+//static void render_conf(t_window *w, t_env *env)
+//{
+//    int x0 = CONF_X0;
+//    int y0 = 0;
+//    int marge = 30;
+//    static int z = 120;
+//    int i = 0;
+//
+//    while (i < 4)
+//    {
+//        line2(x0 + marge / 2, y0 + marge + i, (x0 + marge / 2) + 240, y0 + marge + i, w);
+//        i++;
+//    }
+//    draw_curs(x0 + marge / 2 + z, y0 + marge + (i / 2), w);
+//}
 
-    if ((y0 > WIN_Y || x0 > WIN_X || x0 < 0 || y0 < 0 || y1 > WIN_Y || x1 > WIN_X || x1 < 0 || y1 < 0))
-    {
-        ft_putendl("pixel over/under flow on config window");
-        return ;
-    }
-    color = 0xc3a76b;
-    dx = abs(x1-x0);
-    sx = x0 < x1 ? 1 : -1;
-    dy = abs(y1-y0);
-    sy = y0 <y1 ? 1 : -1;
-    err = (dx > dy ? dx : -dy) / 2;
-    while (1)
-    {
-        draw_pixel(x0, y0, color, w);
-        if (x0 == x1 && y0 == y1)
-            break;
-        e2 = err;
-        if (e2 > -dx)
-        {
-            err -= dy;
-            x0 += sx;
-        }
-        if (e2 < dy)
-        {
-            err += dx;
-            y0 += sy;
-        }
-    }
-}
-
-static void draw_curs(int x, int y, t_window *w)
-{
-    int sx0 = 2;
-    int sy0 = 15;
-    int sx = sx0 / 2;
-    int sy = sy0 / 2;
-    while (sy > -(sy0 / 2))
-    {
-        while (sx > -(sy0 / 2))
-        {
-            draw_pixel((x + sx), (y + sy), 0x0000CC, w);
-            --sx;
-        }
-        sx = sx0 / 2;
-        --sy;
-    }
-}
-
-static void render_conf(t_window *w, t_env *env)
-{
-    int x0 = CONF_X0;
-    int y0 = 0;
-    int marge = 30;
-    static int z = 120;
-    int i = 0;
-
-    while (i < 4)
-    {
-        line2(x0 + marge / 2, y0 + marge + i, (x0 + marge / 2) + 240, y0 + marge + i, w);
-        i++;
-    }
-    draw_curs(x0 + marge / 2 + z, y0 + marge + (i / 2), w);
-}
 
 int        render(t_env * env)
 {
-	static t_window w;
-	if (!w.is_init)
-	{
-		init_window(&w);
-		w.is_init = 1;
-    }
 
-    bzero(w.img_ptr, sizeof(Uint32) * WIN_Y * WIN_X);
-    while (SDL_PollEvent(&w.event))
-        key_handler(w.event, env);
-    render_map(&w, env);
-    if (env->config)
-        render_conf(&w, env);
-    SDL_UpdateTexture(w.image, NULL, w.img_ptr, WIN_X * sizeof(Uint32));
-	SDL_RenderCopy(w.renderer, w.image, NULL, NULL);
-	SDL_RenderPresent(w.renderer);
+
+//    while (SDL_PollEvent(&w.event))
+//        key_handler(w.event, env);
+    ft_putendl("debug 3");
+    render_map(env->w, env);
+//    if (env->config)
+//        render_conf(&w, env);
+    ft_putendl("debug 4.1");
+    mlx_put_image_to_window(env->w->mlx, env->w->win, env->w->data, 0, 0);
+    ft_putendl("debug 4.5");
     return (1);
 }

@@ -13,6 +13,7 @@
 #ifndef FDF_H
 # define FDF_H
 
+# include "mlx.h"
 # include "../libft/libft.h"
 #include <errno.h>
 
@@ -69,9 +70,22 @@ typedef struct      s_color
     int             b2;
 }                   t_color;
 
+typedef struct		s_img
+{
+    char            *buf;
+    void			*data;
+    int				bpp;
+    int				size;
+    int				endian;
+    void			*mlx;
+    void			*win;
+}					t_img;
+
+
 typedef struct		s_env
 {
-	char			**map;
+    t_img           *w;
+    char			**map;
     t_fdf		    **tab;
     int             x;
     int             y;
@@ -103,9 +117,12 @@ typedef struct		s_env
 
 void    			init_env(t_env *env);
 void    			init_env_step2(t_env *env);
-void               init_window(t_window *window);
+void               init_window(t_img *window);
 int                render(t_env *env);
 void                pars_map(t_env *env, char *arg);
 int					ft_error(char *str);
 int					c_to_d(t_env *env, int i);
+
+int         expose_hook(t_env *env);
+
 #endif
