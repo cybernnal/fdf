@@ -40,7 +40,6 @@ void    init_env_step2(t_env *env)
         env->ratio = L_CF(1, 0, env->xmax, 0, WIN_X);
     else
         env->ratio = L_CF(1, 0, env->ymax, 0, WIN_Y);
-    //env->winx = (int) (WIN_X - (env->mod * env->ratio));
 }
 
 int		main(int argc, char  **argv)
@@ -49,22 +48,19 @@ int		main(int argc, char  **argv)
 
 	if (argc < 1)
 		ft_error("too few args");
-   init_env(&env);
+    init_env(&env);
     pars_map(&env, argv[1]);
     init_env_step2(&env);
-    printf("r: %f, xm :%d ym: %d\n", env.ratio, env.xmax, env.ymax);
+
+    env.w = ft_memalloc(sizeof(t_img));
+
     init_window(env.w);
-
-
-    ft_putendl("debug 1");
+    printf("r: %f, xm :%d ym: %d\n\n", env.ratio, env.xmax, env.ymax);
 
     mlx_expose_hook(env.w->win, render, &env);
-
-    ft_putendl("debug 2");
-
+    //mlx_key_hook(env.w->win, key_hook, &env);
+    mlx_hook(env.w->win, 2, (1L << 01), key_hook, &env);
+//    mlx_loop_hook(env.w->win, render, &env);
     mlx_loop(env.w->mlx);
-
-    ft_putendl("debug 5");
-//    render(&env);
-	return (0);
+  	return (0);
 }

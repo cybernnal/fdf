@@ -123,6 +123,9 @@ void                pars_map(t_env *env, char *arg);
 int					ft_error(char *str);
 int					c_to_d(t_env *env, int i);
 
+int		key_hook(int k, t_env *e);
 int         expose_hook(t_env *env);
+void    ft_end(t_env *env);
+
 
 #endif

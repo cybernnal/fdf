@@ -1,100 +1,9 @@
 #include <time.h>
 #include "fdf.h"
 
-static void key_handler(SDL_Event event, t_env *env)
-{
-	if (event.type == SDL_KEYDOWN)
-	{
-         int nb = (env->ratio > 10 ? 1 : 50);
 
-        if (event.key.keysym.sym == SDLK_ESCAPE)
-        {
-            printf("ratio final : %f, wx: %d, wy: %d \n", env->ratio, env->winx, env->winy);
-            exit(EXIT_SUCCESS);
-        }
-        if (event.key.keysym.sym == SDLK_x)
-            env->rzoom += 0.1;
-        if (event.key.keysym.sym == SDLK_s)
-            if (env->rzoom - 0.1 > 0)
-                env->rzoom -= 0.1;
-        if (event.key.keysym.sym == SDLK_z)
-            env->ratio += env->rzoom;
-        if (event.key.keysym.sym == SDLK_a)
-          if (env->ratio - env->rzoom > 0)
-                env->ratio -= env->rzoom;
-        if (event.key.keysym.sym == SDLK_LEFT)
-            env->winx += nb;
-        if (event.key.keysym.sym == SDLK_RIGHT)
-            env->winx -= nb;
-        if (event.key.keysym.sym == SDLK_DOWN)
-            env->winy -= nb;
-        if (event.key.keysym.sym == SDLK_UP)
-            env->winy += nb;
-        if (event.key.keysym.sym == SDLK_n)
-            env->rot -= env->mrot;
-        if (event.key.keysym.sym == SDLK_m)
-            env->rot += env->mrot;
-        if (event.key.keysym.sym == SDLK_j)
-            env->mrot -= 0.01;
-        if (event.key.keysym.sym == SDLK_k)
-            env->mrot += 0.01;
-        if (event.key.keysym.sym == SDLK_p)
-            env->anim = !env->anim;
-        if (event.key.keysym.sym == SDLK_v)
-            env->rad -= env->mrad;
-        if (event.key.keysym.sym == SDLK_b)
-            env->rad += env->mrad;
-        if (event.key.keysym.sym == SDLK_g)
-            env->mrad -= 0.01;
-        if (event.key.keysym.sym == SDLK_h)
-            env->mrad += 0.01;
-        if (event.key.keysym.sym == SDLK_o)
-            env->anim2 = !env->anim2;
-        if (event.key.keysym.sym == SDLK_q)
-            env->col = (env->col + 1) % 4;
-        if (event.key.keysym.sym == SDLK_w)
-            env->cz += 0.05;
-        if (event.key.keysym.sym == SDLK_e)
-            env->cz -= 0.05;
-        if (event.key.keysym.sym == SDLK_d)
-            env->t = !env->t;
-        if (event.key.keysym.sym == SDLK_c)
-            env->config = !env->config;
-        if (event.key.keysym.sym == SDLK_t)
-            env->matrix = !env->matrix;
 
-        int n = 5;
-        
-        if (event.key.keysym.sym == SDLK_1 && env->color.r1 - n >= 0)
-            env->color.r1 -= n;
-        if (event.key.keysym.sym == SDLK_2 && env->color.r1 + n <= 255)
-            env->color.r1 += n;
-        if (event.key.keysym.sym == SDLK_3 && env->color.r2 - n >= 0)
-            env->color.r2 -= n;
-        if (event.key.keysym.sym == SDLK_4 && env->color.r2 + n <= 255)
-            env->color.r2 += n;
-       
-        if (event.key.keysym.sym == SDLK_5 && env->color.g1 - n >= 0)
-            env->color.g1 -= n;
-        if (event.key.keysym.sym == SDLK_6 && env->color.g1 + n <= 255)
-            env->color.g1 += n;
-        if (event.key.keysym.sym == SDLK_7 && env->color.g2 - n >= 0)
-            env->color.g2 -= n;
-        if (event.key.keysym.sym == SDLK_8 && env->color.g2 + n <= 255)
-            env->color.g2 += n;
-       
-        if (event.key.keysym.sym == SDLK_9 && env->color.b1 - n >= 0)
-            env->color.b1 -= n;
-        if (event.key.keysym.sym == SDLK_0 && env->color.b1 + n <= 255)
-            env->color.b1 += n;
-        if (event.key.keysym.sym == '-' && env->color.b2 - n >= 0)
-            env->color.b2 -= n;
-        if (event.key.keysym.sym == '=' && env->color.b2 + n <= 255)
-            env->color.b2 += n;
-    }
-}
-
-void		draw_pixel(char *buf, int x, int y, Uint32 color)
+void		draw_pixel(char *buf, int x, int y, int color)
 {
     if (x > 0 && x < WIN_X && y > 0 && y < WIN_Y)
     {
@@ -105,7 +14,6 @@ void		draw_pixel(char *buf, int x, int y, Uint32 color)
         buf[(x) + (y * WIN_X)] = (char)(color >> 16);
     }
 }
-
 
 static Uint32		terra_color(t_env *e)
 {
@@ -133,13 +41,13 @@ static Uint32       map_color(t_env *env)
 
 static Uint32       custom_color(t_env *env)
 {
-    int r;
-    int g;
-    int b;
+    Uint32 r;
+    Uint32 g;
+    Uint32 b;
  
-    r = L_C(env->tab[env->y][env->x], env->min, env->max, env->color.r1, env->color.r2);
-    g = L_C(env->tab[env->y][env->x], env->min, env->max, env->color.g1, env->color.g2);
-    b = L_C(env->tab[env->y][env->x], env->min, env->max, env->color.b1, env->color.b2);
+    r = (Uint32) L_C(env->tab[env->y][env->x], env->min, env->max, env->color.r1, env->color.r2);
+    g = (Uint32) L_C(env->tab[env->y][env->x], env->min, env->max, env->color.g1, env->color.g2);
+    b = (Uint32) L_C(env->tab[env->y][env->x], env->min, env->max, env->color.b1, env->color.b2);
     return ((Uint32)((r << 16) + (g << 8) + b));
 }
 
@@ -214,10 +122,7 @@ static void line(int x0, int y0, int x1, int y1, t_img *w, t_env *e)
     if (e->config && ((x1 > CONF_X0 && y1 < CONF_YM) || (x0 > CONF_X0 && y1 < CONF_YM)))
         return;
     if (e->t && (y0 > WIN_Y || x0 > WIN_X || x0 < 0 || y0 < 0 || y1 > WIN_Y || x1 > WIN_X || x1 < 0 || y1 < 0))
-    {
-    //   ft_putendl("pixel over/under flow");
         return ;
-    }
     color = t_color[e->col](e);
     dx = abs(x1-x0);
     sx = x0 < x1 ? 1 : -1;
@@ -226,7 +131,7 @@ static void line(int x0, int y0, int x1, int y1, t_img *w, t_env *e)
     err = (dx > dy ? dx : -dy) / 2;
     while (1)
     {
-        draw_pixel(w->buf, x0, y0, color);
+        draw_pixel(w->buf, x0, y0, (int)color);
 		if (x0 == x1 && y0 == y1)
             break;
 		e2 = err;
@@ -305,12 +210,7 @@ static void		render_map(t_img *w, t_env *env)
 {
     t_trace     t;
     static void    (*t_matrix[4])(t_trace *, t_env *) = {NULL};
-    w->buf = mlx_get_data_addr(
-            w->data,
-            &w->bpp,
-            &w->size,
-            &w->endian);
-    //ft_bzero(w->data, sizeof(void*) * WIN_Y * WIN_X);
+
     if (!t_matrix[0])
         ft_matrix_ft_init(t_matrix);
     ft_bzero(&t, sizeof(t_trace));
@@ -321,10 +221,10 @@ static void		render_map(t_img *w, t_env *env)
     if (env->anim2 == 1)
         env->rad += env->mrad;
     env->y = 0;
-    while (env->y < env->line - 1)// && ((v2 + env->winy + z2 * env->cz) * coef) < WIN_Y && ((v2 + env->winy + z2 * env->cz) * coef) < WIN_X)// && ((env->y + env->winy) * coef) + coef < WIN_Y)
+    while (env->y < env->line - 1)
     {
         env->x = 0;
-        while (env->x < env->mod - 1)// && ((env->x + env->winx) * coef) + coef < WIN_X)
+        while (env->x < env->mod - 1)
         {
             env->up = env->tab[env->y][env->x];
             t.z = (int) env->tab[env->y][env->x];
@@ -449,16 +349,8 @@ static void		render_map(t_img *w, t_env *env)
 
 int        render(t_env * env)
 {
-
-
-//    while (SDL_PollEvent(&w.event))
-//        key_handler(w.event, env);
-    ft_putendl("debug 3");
+    ft_bzero(env->w->buf, WIN_Y * WIN_X * 4);
     render_map(env->w, env);
-//    if (env->config)
-//        render_conf(&w, env);
-    ft_putendl("debug 4.1");
     mlx_put_image_to_window(env->w->mlx, env->w->win, env->w->data, 0, 0);
-    ft_putendl("debug 4.5");
     return (1);
 }

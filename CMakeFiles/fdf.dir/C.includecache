@@ -293,6 +293,8 @@ fdf.h
 /Users/tombillard/work/fdf/src/fdf.h
 
 include/fdf.h
+mlx.h
+include/mlx.h
 ../libft/libft.h
 libft/libft.h
 errno.h
