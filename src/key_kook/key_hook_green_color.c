@@ -1,19 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error.c                                            :+:      :+:    :+:   */
+/*   key_hook_green_color.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbillard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/06/19 18:20:11 by tbillard          #+#    #+#             */
-/*   Updated: 2017/03/18 16:11:15 by tbillard         ###   ########.fr       */
+/*   Created: 2017/03/18 16:16:05 by tbillard          #+#    #+#             */
+/*   Updated: 2017/03/18 16:16:20 by tbillard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
 
-int		ft_error(char *str)
+int		go_m(t_env *env)
 {
-	ft_putendl_fd(str, 2);
-	exit(-1);
+	if (env->color.g1 - NB > 0)
+		env->color.g1 -= NB;
+	return (0);
+}
+
+int		go_p(t_env *env)
+{
+	if (env->color.g1 + NB < 255)
+		env->color.g1 += NB;
+	return (0);
+}
+
+int		gt_m(t_env *env)
+{
+	if (env->color.g2 - NB > 0)
+		env->color.g2 -= NB;
+	return (0);
+}
+
+int		gt_p(t_env *env)
+{
+	if (env->color.g2 + NB < 255)
+		env->color.g2 += NB;
+	return (0);
 }

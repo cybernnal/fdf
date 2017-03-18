@@ -1,19 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error.c                                            :+:      :+:    :+:   */
+/*   key_hook_move.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbillard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/06/19 18:20:11 by tbillard          #+#    #+#             */
-/*   Updated: 2017/03/18 16:11:15 by tbillard         ###   ########.fr       */
+/*   Created: 2017/03/18 16:20:05 by tbillard          #+#    #+#             */
+/*   Updated: 2017/03/18 16:21:41 by tbillard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
 
-int		ft_error(char *str)
+int		go_left(t_env *env)
 {
-	ft_putendl_fd(str, 2);
-	exit(-1);
+	int nb;
+
+	nb = (env->ratio > 10 ? 1 : 50);
+	env->winx += nb;
+	return (0);
+}
+
+int		go_right(t_env *env)
+{
+	int nb;
+
+	nb = (env->ratio > 10 ? 1 : 50);
+	env->winx -= nb;
+	return (0);
+}
+
+int		go_top(t_env *env)
+{
+	int nb;
+
+	nb = (env->ratio > 10 ? 1 : 50);
+	env->winy += nb;
+	return (0);
+}
+
+int		go_bot(t_env *env)
+{
+	int nb;
+
+	nb = (env->ratio > 10 ? 1 : 50);
+	env->winy -= nb;
+	return (0);
 }

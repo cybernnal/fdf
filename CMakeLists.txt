@@ -74,7 +74,7 @@ set(SOURCE_FILES
         libft/libft.h
         src/conv_tab.c
         src/error.c
-        src/main.c src/parsing.c src/render.c src/init.c)
+        src/main.c src/parsing.c src/render.c src/init.c src/key_kook/key_hook_zoom.c src/key_kook/key_hook_other.c src/key_kook/hook_init.c)
 
 add_executable(fdf ${SOURCE_FILES})
 

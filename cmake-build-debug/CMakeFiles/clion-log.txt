@@ -1,0 +1,13 @@
+/Applications/CLion.app/Contents/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/tbillard/ClionProjects/fdf
+<FindSDL2.cmake>
+</FindSDL2.cmake>
+CMake Error at /Applications/CLion.app/Contents/bin/cmake/share/cmake-3.6/Modules/FindPackageHandleStandardArgs.cmake:148 (message):
+  Could NOT find SDL2 (missing: SDL2_LIBRARY SDL2_INCLUDE_DIR)
+Call Stack (most recent call first):
+  /Applications/CLion.app/Contents/bin/cmake/share/cmake-3.6/Modules/FindPackageHandleStandardArgs.cmake:388 (_FPHSA_FAILURE_MESSAGE)
+  cmake/FindSDL2.cmake:167 (FIND_PACKAGE_HANDLE_STANDARD_ARGS)
+  CMakeLists.txt:85 (find_package)
+
+
+-- Configuring incomplete, errors occurred!
+See also "/Users/tbillard/ClionProjects/fdf/CMakeFiles/CMakeOutput.log".

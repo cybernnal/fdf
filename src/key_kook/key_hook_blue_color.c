@@ -1,19 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error.c                                            :+:      :+:    :+:   */
+/*   key_hook_blue_color.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbillard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/06/19 18:20:11 by tbillard          #+#    #+#             */
-/*   Updated: 2017/03/18 16:11:15 by tbillard         ###   ########.fr       */
+/*   Created: 2017/03/18 16:13:06 by tbillard          #+#    #+#             */
+/*   Updated: 2017/03/18 16:13:30 by tbillard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
 
-int		ft_error(char *str)
+int		bo_m(t_env *env)
 {
-	ft_putendl_fd(str, 2);
-	exit(-1);
+	if (env->color.b1 - NB > 0)
+		env->color.b1 -= NB;
+	return (0);
+}
+
+int		bo_p(t_env *env)
+{
+	if (env->color.b1 + NB < 255)
+		env->color.b1 += NB;
+	return (0);
+}
+
+int		bt_m(t_env *env)
+{
+	if (env->color.b2 - NB > 0)
+		env->color.b2 -= NB;
+	return (0);
+}
+
+int		bt_p(t_env *env)
+{
+	if (env->color.b2 + NB < 255)
+		env->color.b2 += NB;
+	return (0);
 }

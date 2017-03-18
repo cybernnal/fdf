@@ -1,1 +1,3 @@
 tbillard
+
+gcc  src/*.c libft/libft.a -I./libft/ -I./include -L./minilibx_macos/ -lmlx -framework OpenGL -framework AppKit -I./minilibx_macos/ -Ofast -march=native
