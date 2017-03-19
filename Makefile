@@ -1932,6 +1932,87 @@ src/init.c.s:
 	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/init.c.s
 .PHONY : src/init.c.s
 
+src/key_kook/hook_init.o: src/key_kook/hook_init.c.o
+
+.PHONY : src/key_kook/hook_init.o
+
+# target to build an object file
+src/key_kook/hook_init.c.o:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/key_kook/hook_init.c.o
+.PHONY : src/key_kook/hook_init.c.o
+
+src/key_kook/hook_init.i: src/key_kook/hook_init.c.i
+
+.PHONY : src/key_kook/hook_init.i
+
+# target to preprocess a source file
+src/key_kook/hook_init.c.i:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/key_kook/hook_init.c.i
+.PHONY : src/key_kook/hook_init.c.i
+
+src/key_kook/hook_init.s: src/key_kook/hook_init.c.s
+
+.PHONY : src/key_kook/hook_init.s
+
+# target to generate assembly for a file
+src/key_kook/hook_init.c.s:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/key_kook/hook_init.c.s
+.PHONY : src/key_kook/hook_init.c.s
+
+src/key_kook/key_hook_other.o: src/key_kook/key_hook_other.c.o
+
+.PHONY : src/key_kook/key_hook_other.o
+
+# target to build an object file
+src/key_kook/key_hook_other.c.o:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/key_kook/key_hook_other.c.o
+.PHONY : src/key_kook/key_hook_other.c.o
+
+src/key_kook/key_hook_other.i: src/key_kook/key_hook_other.c.i
+
+.PHONY : src/key_kook/key_hook_other.i
+
+# target to preprocess a source file
+src/key_kook/key_hook_other.c.i:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/key_kook/key_hook_other.c.i
+.PHONY : src/key_kook/key_hook_other.c.i
+
+src/key_kook/key_hook_other.s: src/key_kook/key_hook_other.c.s
+
+.PHONY : src/key_kook/key_hook_other.s
+
+# target to generate assembly for a file
+src/key_kook/key_hook_other.c.s:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/key_kook/key_hook_other.c.s
+.PHONY : src/key_kook/key_hook_other.c.s
+
+src/key_kook/key_hook_zoom.o: src/key_kook/key_hook_zoom.c.o
+
+.PHONY : src/key_kook/key_hook_zoom.o
+
+# target to build an object file
+src/key_kook/key_hook_zoom.c.o:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/key_kook/key_hook_zoom.c.o
+.PHONY : src/key_kook/key_hook_zoom.c.o
+
+src/key_kook/key_hook_zoom.i: src/key_kook/key_hook_zoom.c.i
+
+.PHONY : src/key_kook/key_hook_zoom.i
+
+# target to preprocess a source file
+src/key_kook/key_hook_zoom.c.i:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/key_kook/key_hook_zoom.c.i
+.PHONY : src/key_kook/key_hook_zoom.c.i
+
+src/key_kook/key_hook_zoom.s: src/key_kook/key_hook_zoom.c.s
+
+.PHONY : src/key_kook/key_hook_zoom.s
+
+# target to generate assembly for a file
+src/key_kook/key_hook_zoom.c.s:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/key_kook/key_hook_zoom.c.s
+.PHONY : src/key_kook/key_hook_zoom.c.s
+
 src/main.o: src/main.c.o
 
 .PHONY : src/main.o
@@ -1986,32 +2067,32 @@ src/parsing.c.s:
 	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/parsing.c.s
 .PHONY : src/parsing.c.s
 
-src/render.o: src/render.c.o
+src/render/render.o: src/render/render.c.o
 
-.PHONY : src/render.o
+.PHONY : src/render/render.o
 
 # target to build an object file
-src/render.c.o:
-	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/render.c.o
-.PHONY : src/render.c.o
+src/render/render.c.o:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/render/render.c.o
+.PHONY : src/render/render.c.o
 
-src/render.i: src/render.c.i
+src/render/render.i: src/render/render.c.i
 
-.PHONY : src/render.i
+.PHONY : src/render/render.i
 
 # target to preprocess a source file
-src/render.c.i:
-	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/render.c.i
-.PHONY : src/render.c.i
+src/render/render.c.i:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/render/render.c.i
+.PHONY : src/render/render.c.i
 
-src/render.s: src/render.c.s
+src/render/render.s: src/render/render.c.s
 
-.PHONY : src/render.s
+.PHONY : src/render/render.s
 
 # target to generate assembly for a file
-src/render.c.s:
-	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/render.c.s
-.PHONY : src/render.c.s
+src/render/render.c.s:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/render/render.c.s
+.PHONY : src/render/render.c.s
 
 # Help Target
 help:
@@ -2223,15 +2304,24 @@ help:
 	@echo "... src/init.o"
 	@echo "... src/init.i"
 	@echo "... src/init.s"
+	@echo "... src/key_kook/hook_init.o"
+	@echo "... src/key_kook/hook_init.i"
+	@echo "... src/key_kook/hook_init.s"
+	@echo "... src/key_kook/key_hook_other.o"
+	@echo "... src/key_kook/key_hook_other.i"
+	@echo "... src/key_kook/key_hook_other.s"
+	@echo "... src/key_kook/key_hook_zoom.o"
+	@echo "... src/key_kook/key_hook_zoom.i"
+	@echo "... src/key_kook/key_hook_zoom.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
 	@echo "... src/parsing.o"
 	@echo "... src/parsing.i"
 	@echo "... src/parsing.s"
-	@echo "... src/render.o"
-	@echo "... src/render.i"
-	@echo "... src/render.s"
+	@echo "... src/render/render.o"
+	@echo "... src/render/render.i"
+	@echo "... src/render/render.s"
 .PHONY : help
 
 

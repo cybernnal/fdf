@@ -55,9 +55,7 @@ int			main(int argc, char **argv)
 	init_window(env.w);
 	printf("r: %f, xm :%d ym: %d\n\n", env.ratio, env.xmax, env.ymax);
 	mlx_expose_hook(env.w->win, render, &env);
-	//mlx_key_hook(env.w->win, key_hook, &env);
 	mlx_hook(env.w->win, 2, (1L << 01), key_hook, &env);
-	//    mlx_loop_hook(env.w->win, render, &env);
 	mlx_loop(env.w->mlx);
 	return (0);
 }

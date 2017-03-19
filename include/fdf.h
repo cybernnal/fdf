@@ -138,9 +138,6 @@ void    ft_end(t_env *env);
 
 void		ft_tab_ft_init_1(int (**tab_ft)(t_env*));
 void		ft_tab_ft_init_2(int (**tab_ft)(t_env*));
-void		ft_tab_ft_init_3(int (**tab_ft)(t_env*));
-void		ft_tab_ft_init_4(int (**tab_ft)(t_env*));
-void		ft_tab_ft_init_5(int (**tab_ft)(t_env*));
 
 
 int         matrix_hook(t_env *env);
@@ -186,5 +183,20 @@ int     bo_m(t_env *env);
 int     bo_p(t_env *env);
 int     bt_m(t_env *env);
 int     bt_p(t_env *env);
+
+
+
+Uint32		terra_color(t_env *e);
+Uint32		map_color(t_env *env);
+Uint32		custom_color(t_env *env);
+Uint32		ign_color(t_env *e);
+
+
+void			call_line(t_trace t, t_env *env, t_img *w, int nb);
+
+
+void			matrix(t_trace *t, t_env *env);
+void			matrix2(t_trace *t, t_env *env);
+void			ft_matrix_ft_init(void (**tab_ft)(t_trace *, t_env *));
 
 #endif

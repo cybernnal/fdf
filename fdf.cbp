@@ -298,13 +298,22 @@
 		<Unit filename="/Users/tombillard/work/fdf/src/init.c">
 			<Option target="fdf"/>
 		</Unit>
+		<Unit filename="/Users/tombillard/work/fdf/src/key_kook/hook_init.c">
+			<Option target="fdf"/>
+		</Unit>
+		<Unit filename="/Users/tombillard/work/fdf/src/key_kook/key_hook_other.c">
+			<Option target="fdf"/>
+		</Unit>
+		<Unit filename="/Users/tombillard/work/fdf/src/key_kook/key_hook_zoom.c">
+			<Option target="fdf"/>
+		</Unit>
 		<Unit filename="/Users/tombillard/work/fdf/src/main.c">
 			<Option target="fdf"/>
 		</Unit>
 		<Unit filename="/Users/tombillard/work/fdf/src/parsing.c">
 			<Option target="fdf"/>
 		</Unit>
-		<Unit filename="/Users/tombillard/work/fdf/src/render.c">
+		<Unit filename="/Users/tombillard/work/fdf/src/render/render.c">
 			<Option target="fdf"/>
 		</Unit>
 		<Unit filename="/Users/tombillard/work/fdf/CMakeLists.txt">
