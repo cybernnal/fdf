@@ -2,9 +2,9 @@
 
 static Uint32       get_color(int c, int i, int x0, int x1)
 {
-    int color;
+    Uint32 color;
 
-     color = (int)L_CF(i, 0, SIZE, 0, 255);
+     color = (Uint32)(int)L_CF(i, 0, SIZE, 0, 255);
     if (c == 0)
         return ((Uint32)(color << 16));
     if (c == 1)
