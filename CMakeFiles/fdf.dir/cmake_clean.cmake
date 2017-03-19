@@ -93,6 +93,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/fdf.dir/src/render/panel/panel_draw_circle.c.o"
   "CMakeFiles/fdf.dir/src/render/panel/panel_get_mouse.c.o"
   "CMakeFiles/fdf.dir/src/render/panel/panel_do_slide.c.o"
+  "CMakeFiles/fdf.dir/src/render/color_inline.c.o"
+  "CMakeFiles/fdf.dir/src/key_kook/key_hook_other_color.c.o"
   "fdf.pdb"
   "fdf"
 )

@@ -2148,6 +2148,33 @@ src/key_kook/key_hook_other.c.s:
 	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/key_kook/key_hook_other.c.s
 .PHONY : src/key_kook/key_hook_other.c.s
 
+src/key_kook/key_hook_other_color.o: src/key_kook/key_hook_other_color.c.o
+
+.PHONY : src/key_kook/key_hook_other_color.o
+
+# target to build an object file
+src/key_kook/key_hook_other_color.c.o:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/key_kook/key_hook_other_color.c.o
+.PHONY : src/key_kook/key_hook_other_color.c.o
+
+src/key_kook/key_hook_other_color.i: src/key_kook/key_hook_other_color.c.i
+
+.PHONY : src/key_kook/key_hook_other_color.i
+
+# target to preprocess a source file
+src/key_kook/key_hook_other_color.c.i:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/key_kook/key_hook_other_color.c.i
+.PHONY : src/key_kook/key_hook_other_color.c.i
+
+src/key_kook/key_hook_other_color.s: src/key_kook/key_hook_other_color.c.s
+
+.PHONY : src/key_kook/key_hook_other_color.s
+
+# target to generate assembly for a file
+src/key_kook/key_hook_other_color.c.s:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/key_kook/key_hook_other_color.c.s
+.PHONY : src/key_kook/key_hook_other_color.c.s
+
 src/key_kook/key_hook_panel.o: src/key_kook/key_hook_panel.c.o
 
 .PHONY : src/key_kook/key_hook_panel.o
@@ -2390,6 +2417,33 @@ src/render/color.s: src/render/color.c.s
 src/render/color.c.s:
 	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/render/color.c.s
 .PHONY : src/render/color.c.s
+
+src/render/color_inline.o: src/render/color_inline.c.o
+
+.PHONY : src/render/color_inline.o
+
+# target to build an object file
+src/render/color_inline.c.o:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/render/color_inline.c.o
+.PHONY : src/render/color_inline.c.o
+
+src/render/color_inline.i: src/render/color_inline.c.i
+
+.PHONY : src/render/color_inline.i
+
+# target to preprocess a source file
+src/render/color_inline.c.i:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/render/color_inline.c.i
+.PHONY : src/render/color_inline.c.i
+
+src/render/color_inline.s: src/render/color_inline.c.s
+
+.PHONY : src/render/color_inline.s
+
+# target to generate assembly for a file
+src/render/color_inline.c.s:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/render/color_inline.c.s
+.PHONY : src/render/color_inline.c.s
 
 src/render/draw_line.o: src/render/draw_line.c.o
 
@@ -2895,6 +2949,9 @@ help:
 	@echo "... src/key_kook/key_hook_other.o"
 	@echo "... src/key_kook/key_hook_other.i"
 	@echo "... src/key_kook/key_hook_other.s"
+	@echo "... src/key_kook/key_hook_other_color.o"
+	@echo "... src/key_kook/key_hook_other_color.i"
+	@echo "... src/key_kook/key_hook_other_color.s"
 	@echo "... src/key_kook/key_hook_panel.o"
 	@echo "... src/key_kook/key_hook_panel.i"
 	@echo "... src/key_kook/key_hook_panel.s"
@@ -2922,6 +2979,9 @@ help:
 	@echo "... src/render/color.o"
 	@echo "... src/render/color.i"
 	@echo "... src/render/color.s"
+	@echo "... src/render/color_inline.o"
+	@echo "... src/render/color_inline.i"
+	@echo "... src/render/color_inline.s"
 	@echo "... src/render/draw_line.o"
 	@echo "... src/render/draw_line.i"
 	@echo "... src/render/draw_line.s"

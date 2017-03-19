@@ -25,17 +25,17 @@ Uint32		map_color(t_env *env)
                         env->min, env->max, min, max));
 }
 
-Uint32		custom_color(t_env *env)
+Uint32		  custom_color(t_env *env)
 {
     Uint32 r;
     Uint32 g;
     Uint32 b;
 
-    r = (Uint32)L_C(env->tab[env->y][env->x], env->min, env->max,
+    r = (Uint32)L_CF(env->tab[env->y][env->x], env->min, env->max,
                     env->color.r1, env->color.r2);
-    g = (Uint32)L_C(env->tab[env->y][env->x], env->min, env->max,
+    g = (Uint32)L_CF(env->tab[env->y][env->x], env->min, env->max,
                     env->color.g1, env->color.g2);
-    b = (Uint32)L_C(env->tab[env->y][env->x], env->min, env->max,
+    b = (Uint32)L_CF(env->tab[env->y][env->x], env->min, env->max,
                     env->color.b1, env->color.b2);
     return ((Uint32)((r << 16) + (g << 8) + b));
 }
@@ -68,7 +68,7 @@ Uint32		ign_color(t_env *e)
 {
     int				z2;
 
-    z2 = (int)e->up;
+    z2 = (int)e->tab[e->y][e->x];
     if (z2 >= 250)
         return (0xf5f4f2);
     if (z2 >= 225)

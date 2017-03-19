@@ -325,6 +325,9 @@
 		<Unit filename="/Users/tombillard/work/fdf_sdl/src/key_kook/key_hook_other.c">
 			<Option target="fdf"/>
 		</Unit>
+		<Unit filename="/Users/tombillard/work/fdf_sdl/src/key_kook/key_hook_other_color.c">
+			<Option target="fdf"/>
+		</Unit>
 		<Unit filename="/Users/tombillard/work/fdf_sdl/src/key_kook/key_hook_panel.c">
 			<Option target="fdf"/>
 		</Unit>
@@ -350,6 +353,9 @@
 			<Option target="fdf"/>
 		</Unit>
 		<Unit filename="/Users/tombillard/work/fdf_sdl/src/render/color.c">
+			<Option target="fdf"/>
+		</Unit>
+		<Unit filename="/Users/tombillard/work/fdf_sdl/src/render/color_inline.c">
 			<Option target="fdf"/>
 		</Unit>
 		<Unit filename="/Users/tombillard/work/fdf_sdl/src/render/draw_line.c">

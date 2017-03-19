@@ -11,6 +11,9 @@ static void			ft_tab_ft_init(Uint32 (**tab_ft)(t_env *))
 static void			loop_line(t_line l, t_env *e,
                                  Uint32 (**t_color)(t_env *), t_window *w)
 {
+    int i;
+
+    i = 0;
     l.color = t_color[e->col](e);
     l.dx = abs(l.x1 - l.x0);
     l.sx = l.x0 < l.x1 ? 1 : -1;
@@ -19,6 +22,7 @@ static void			loop_line(t_line l, t_env *e,
     l.err = (l.dx > l.dy ? l.dx : -l.dy) / 2;
     while (1)
     {
+        l.color = custom_color_il(e, l.color, i);//Uint32)L_CF(i, 0, e->ratio, l.color, t_color[e->col + 1](e));
         draw_pixel(l.x0, l.y0, l.color, w);
         if (l.x0 == l.x1 && l.y0 == l.y1)
             break ;
@@ -33,12 +37,13 @@ static void			loop_line(t_line l, t_env *e,
             l.err += l.dx;
             l.y0 += l.sy;
         }
+        i++;
     }
 }
 
 static void			line(t_line l, t_env *e, t_window *w)
 {
-    static Uint32	(*t_color[3])(t_env *) = {NULL};
+    static Uint32	(*t_color[6])(t_env *) = {NULL};
 
     if (!t_color[0])
         ft_tab_ft_init(t_color);
@@ -58,12 +63,14 @@ void			call_line(t_trace t, t_env *env, t_window *w, int nb)
     l.y0 = (int)((t.v + env->winy + t.z * env->cz) * t.coef);
     if (nb == 0 || nb == 1)
     {
+        env->pos = 1;
         l.x1 = (int)(((t.u1 + env->winx) * t.coef));
         l.y1 = (int)((t.v1 + env->winy + t.zx1 * env->cz) * t.coef);
         line(l, env, w);
     }
     if (nb == 0 || nb == 2)
     {
+        env->pos = 2;
         l.x1 = (int)((t.u2 + env->winx) * t.coef);
         l.y1 = (int)(((t.v2 + env->winy + t.zy1 * env->cz) * t.coef));
         line(l, env, w);

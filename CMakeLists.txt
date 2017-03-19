@@ -95,7 +95,7 @@ set(SOURCE_FILES
     src/init.c
     src/main.c
     src/parsing.c
-    src/end_func.c include/panel.h src/render/panel/panel_line.c src/draw_pixel.c src/render/panel/panel_slide.c src/render/panel/panel_cursor.c src/render/panel/panel_draw_circle.c src/render/panel/panel_get_mouse.c src/render/panel/panel_do_slide.c)
+    src/end_func.c include/panel.h src/render/panel/panel_line.c src/draw_pixel.c src/render/panel/panel_slide.c src/render/panel/panel_cursor.c src/render/panel/panel_draw_circle.c src/render/panel/panel_get_mouse.c src/render/panel/panel_do_slide.c src/render/color_inline.c src/key_kook/key_hook_other_color.c)
 
 add_executable(fdf ${SOURCE_FILES})
 

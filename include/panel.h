@@ -10,7 +10,7 @@
 #define MARGE   30
 #define SIZE    ((WIN_X - CONF_X0) - MARGE)
 #define BT      (CONF_YM / 3)
-#define CUR_S   7
+#define CUR_S   10
 #define RED     0xff0000
 #define GREEN   0x00ff00
 #define BLUE    0x0000ff

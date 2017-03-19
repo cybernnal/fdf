@@ -229,6 +229,10 @@ CMakeFiles/fdf.dir/src/key_kook/key_hook_other.c.o
  /Users/tombillard/work/fdf_sdl/src/key_kook/key_hook_other.c
  include/fdf.h
  libft/libft.h
+CMakeFiles/fdf.dir/src/key_kook/key_hook_other_color.c.o
+ /Users/tombillard/work/fdf_sdl/src/key_kook/key_hook_other_color.c
+ include/fdf.h
+ libft/libft.h
 CMakeFiles/fdf.dir/src/key_kook/key_hook_panel.c.o
  /Users/tombillard/work/fdf_sdl/src/key_kook/key_hook_panel.c
  include/fdf.h
@@ -263,6 +267,10 @@ CMakeFiles/fdf.dir/src/parsing.c.o
  libft/libft.h
 CMakeFiles/fdf.dir/src/render/color.c.o
  /Users/tombillard/work/fdf_sdl/src/render/color.c
+ include/fdf.h
+ libft/libft.h
+CMakeFiles/fdf.dir/src/render/color_inline.c.o
+ /Users/tombillard/work/fdf_sdl/src/render/color_inline.c
  include/fdf.h
  libft/libft.h
 CMakeFiles/fdf.dir/src/render/draw_line.c.o

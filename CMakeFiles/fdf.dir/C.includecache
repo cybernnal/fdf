@@ -306,6 +306,10 @@ fdf.h
 fdf.h
 /Users/tombillard/work/fdf_sdl/src/key_kook/fdf.h
 
+/Users/tombillard/work/fdf_sdl/src/key_kook/key_hook_other_color.c
+fdf.h
+/Users/tombillard/work/fdf_sdl/src/key_kook/fdf.h
+
 /Users/tombillard/work/fdf_sdl/src/key_kook/key_hook_panel.c
 fdf.h
 /Users/tombillard/work/fdf_sdl/src/key_kook/fdf.h
@@ -343,6 +347,10 @@ fcntl.h
 -
 
 /Users/tombillard/work/fdf_sdl/src/render/color.c
+fdf.h
+/Users/tombillard/work/fdf_sdl/src/render/fdf.h
+
+/Users/tombillard/work/fdf_sdl/src/render/color_inline.c
 fdf.h
 /Users/tombillard/work/fdf_sdl/src/render/fdf.h
 

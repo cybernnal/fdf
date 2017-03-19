@@ -2313,6 +2313,54 @@ CMakeFiles/fdf.dir/src/render/panel/panel_do_slide.c.o.provides: CMakeFiles/fdf.
 CMakeFiles/fdf.dir/src/render/panel/panel_do_slide.c.o.provides.build: CMakeFiles/fdf.dir/src/render/panel/panel_do_slide.c.o
 
 
+CMakeFiles/fdf.dir/src/render/color_inline.c.o: CMakeFiles/fdf.dir/flags.make
+CMakeFiles/fdf.dir/src/render/color_inline.c.o: src/render/color_inline.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/tombillard/work/fdf_sdl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_95) "Building C object CMakeFiles/fdf.dir/src/render/color_inline.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/fdf.dir/src/render/color_inline.c.o   -c /Users/tombillard/work/fdf_sdl/src/render/color_inline.c
+
+CMakeFiles/fdf.dir/src/render/color_inline.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/fdf.dir/src/render/color_inline.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/tombillard/work/fdf_sdl/src/render/color_inline.c > CMakeFiles/fdf.dir/src/render/color_inline.c.i
+
+CMakeFiles/fdf.dir/src/render/color_inline.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fdf.dir/src/render/color_inline.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/tombillard/work/fdf_sdl/src/render/color_inline.c -o CMakeFiles/fdf.dir/src/render/color_inline.c.s
+
+CMakeFiles/fdf.dir/src/render/color_inline.c.o.requires:
+
+.PHONY : CMakeFiles/fdf.dir/src/render/color_inline.c.o.requires
+
+CMakeFiles/fdf.dir/src/render/color_inline.c.o.provides: CMakeFiles/fdf.dir/src/render/color_inline.c.o.requires
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/render/color_inline.c.o.provides.build
+.PHONY : CMakeFiles/fdf.dir/src/render/color_inline.c.o.provides
+
+CMakeFiles/fdf.dir/src/render/color_inline.c.o.provides.build: CMakeFiles/fdf.dir/src/render/color_inline.c.o
+
+
+CMakeFiles/fdf.dir/src/key_kook/key_hook_other_color.c.o: CMakeFiles/fdf.dir/flags.make
+CMakeFiles/fdf.dir/src/key_kook/key_hook_other_color.c.o: src/key_kook/key_hook_other_color.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/tombillard/work/fdf_sdl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_96) "Building C object CMakeFiles/fdf.dir/src/key_kook/key_hook_other_color.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/fdf.dir/src/key_kook/key_hook_other_color.c.o   -c /Users/tombillard/work/fdf_sdl/src/key_kook/key_hook_other_color.c
+
+CMakeFiles/fdf.dir/src/key_kook/key_hook_other_color.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/fdf.dir/src/key_kook/key_hook_other_color.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/tombillard/work/fdf_sdl/src/key_kook/key_hook_other_color.c > CMakeFiles/fdf.dir/src/key_kook/key_hook_other_color.c.i
+
+CMakeFiles/fdf.dir/src/key_kook/key_hook_other_color.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fdf.dir/src/key_kook/key_hook_other_color.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/tombillard/work/fdf_sdl/src/key_kook/key_hook_other_color.c -o CMakeFiles/fdf.dir/src/key_kook/key_hook_other_color.c.s
+
+CMakeFiles/fdf.dir/src/key_kook/key_hook_other_color.c.o.requires:
+
+.PHONY : CMakeFiles/fdf.dir/src/key_kook/key_hook_other_color.c.o.requires
+
+CMakeFiles/fdf.dir/src/key_kook/key_hook_other_color.c.o.provides: CMakeFiles/fdf.dir/src/key_kook/key_hook_other_color.c.o.requires
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/key_kook/key_hook_other_color.c.o.provides.build
+.PHONY : CMakeFiles/fdf.dir/src/key_kook/key_hook_other_color.c.o.provides
+
+CMakeFiles/fdf.dir/src/key_kook/key_hook_other_color.c.o.provides.build: CMakeFiles/fdf.dir/src/key_kook/key_hook_other_color.c.o
+
+
 # Object files for target fdf
 fdf_OBJECTS = \
 "CMakeFiles/fdf.dir/libft/ft_atoi.c.o" \
@@ -2408,7 +2456,9 @@ fdf_OBJECTS = \
 "CMakeFiles/fdf.dir/src/render/panel/panel_cursor.c.o" \
 "CMakeFiles/fdf.dir/src/render/panel/panel_draw_circle.c.o" \
 "CMakeFiles/fdf.dir/src/render/panel/panel_get_mouse.c.o" \
-"CMakeFiles/fdf.dir/src/render/panel/panel_do_slide.c.o"
+"CMakeFiles/fdf.dir/src/render/panel/panel_do_slide.c.o" \
+"CMakeFiles/fdf.dir/src/render/color_inline.c.o" \
+"CMakeFiles/fdf.dir/src/key_kook/key_hook_other_color.c.o"
 
 # External object files for target fdf
 fdf_EXTERNAL_OBJECTS =
@@ -2507,11 +2557,13 @@ fdf: CMakeFiles/fdf.dir/src/render/panel/panel_cursor.c.o
 fdf: CMakeFiles/fdf.dir/src/render/panel/panel_draw_circle.c.o
 fdf: CMakeFiles/fdf.dir/src/render/panel/panel_get_mouse.c.o
 fdf: CMakeFiles/fdf.dir/src/render/panel/panel_do_slide.c.o
+fdf: CMakeFiles/fdf.dir/src/render/color_inline.c.o
+fdf: CMakeFiles/fdf.dir/src/key_kook/key_hook_other_color.c.o
 fdf: CMakeFiles/fdf.dir/build.make
 fdf: /usr/local/lib/libSDL2main.a
 fdf: /usr/local/lib/libSDL2.dylib
 fdf: CMakeFiles/fdf.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/tombillard/work/fdf_sdl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_95) "Linking C executable fdf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/tombillard/work/fdf_sdl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_97) "Linking C executable fdf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/fdf.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -2613,6 +2665,8 @@ CMakeFiles/fdf.dir/requires: CMakeFiles/fdf.dir/src/render/panel/panel_cursor.c.
 CMakeFiles/fdf.dir/requires: CMakeFiles/fdf.dir/src/render/panel/panel_draw_circle.c.o.requires
 CMakeFiles/fdf.dir/requires: CMakeFiles/fdf.dir/src/render/panel/panel_get_mouse.c.o.requires
 CMakeFiles/fdf.dir/requires: CMakeFiles/fdf.dir/src/render/panel/panel_do_slide.c.o.requires
+CMakeFiles/fdf.dir/requires: CMakeFiles/fdf.dir/src/render/color_inline.c.o.requires
+CMakeFiles/fdf.dir/requires: CMakeFiles/fdf.dir/src/key_kook/key_hook_other_color.c.o.requires
 
 .PHONY : CMakeFiles/fdf.dir/requires
 

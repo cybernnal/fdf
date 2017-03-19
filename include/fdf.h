@@ -117,6 +117,8 @@ typedef struct		s_env
     t_fdf             max;
     t_fdf             up;
     t_color          color;
+	int				pos;
+	int 			il;
 }					t_env;
 
 void    			init_env(t_env *env);
@@ -174,12 +176,14 @@ int     bo_p(t_env *env);
 int     bt_m(t_env *env);
 int     bt_p(t_env *env);
 
-
+int     il(t_env *env);
 
 Uint32		terra_color(t_env *e);
 Uint32		map_color(t_env *env);
 Uint32		custom_color(t_env *env);
 Uint32		ign_color(t_env *e);
+Uint32		custom_color_il(t_env *env, Uint32 c1, int t);
+
 
 
 void			call_line(t_trace t, t_env *env, t_window *w, int nb);

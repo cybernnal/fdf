@@ -24,6 +24,7 @@ void		ft_tab_ft_init_2(int (**tab_ft)(t_env*))
     tab_ft['o'] = &anim_ra;
     tab_ft['p'] = &anim_ro;
     tab_ft['c'] = &config_set;
+	tab_ft['y'] = &il;
 	tab_ft[SDLK_ESCAPE] = &ft_exit;
 }
 
