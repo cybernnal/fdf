@@ -1,3 +1,0 @@
-/Users/tombillard/work/fdf_sdl/CMakeFiles/edit_cache.dir
-/Users/tombillard/work/fdf_sdl/CMakeFiles/rebuild_cache.dir
-/Users/tombillard/work/fdf_sdl/CMakeFiles/fdf.dir
