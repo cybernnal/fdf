@@ -6,5 +6,5 @@ C_FLAGS =
 
 C_DEFINES = 
 
-C_INCLUDES = -I/Users/tombillard/work/fdf_sdl/include -I/Users/tombillard/work/fdf_sdl/libft -I/usr/local/include/SDL2 
+C_INCLUDES = -I/Users/tombillard/work/fdf_sdl/include -I/Users/tombillard/work/fdf_sdl/libft 
 

@@ -266,14 +266,6 @@ stdlib.h
 fdf.h
 -
 
-/Users/tombillard/work/fdf_sdl/src/draw_pixel.c
-fdf.h
-/Users/tombillard/work/fdf_sdl/src/fdf.h
-
-/Users/tombillard/work/fdf_sdl/src/end_func.c
-fdf.h
-/Users/tombillard/work/fdf_sdl/src/fdf.h
-
 /Users/tombillard/work/fdf_sdl/src/error.c
 fdf.h
 /Users/tombillard/work/fdf_sdl/src/fdf.h
@@ -290,10 +282,6 @@ fdf.h
 fdf.h
 /Users/tombillard/work/fdf_sdl/src/key_kook/fdf.h
 
-/Users/tombillard/work/fdf_sdl/src/key_kook/key_hook_anim.c
-fdf.h
-/Users/tombillard/work/fdf_sdl/src/key_kook/fdf.h
-
 /Users/tombillard/work/fdf_sdl/src/key_kook/key_hook_blue_color.c
 fdf.h
 /Users/tombillard/work/fdf_sdl/src/key_kook/fdf.h
@@ -302,11 +290,11 @@ fdf.h
 fdf.h
 /Users/tombillard/work/fdf_sdl/src/key_kook/fdf.h
 
-/Users/tombillard/work/fdf_sdl/src/key_kook/key_hook_other.c
+/Users/tombillard/work/fdf_sdl/src/key_kook/key_hook_move.c
 fdf.h
 /Users/tombillard/work/fdf_sdl/src/key_kook/fdf.h
 
-/Users/tombillard/work/fdf_sdl/src/key_kook/key_hook_panel.c
+/Users/tombillard/work/fdf_sdl/src/key_kook/key_hook_other.c
 fdf.h
 /Users/tombillard/work/fdf_sdl/src/key_kook/fdf.h
 
@@ -354,34 +342,6 @@ fdf.h
 fdf.h
 /Users/tombillard/work/fdf_sdl/src/render/fdf.h
 
-/Users/tombillard/work/fdf_sdl/src/render/panel/admin_panel.c
-panel.h
-/Users/tombillard/work/fdf_sdl/src/render/panel/panel.h
-
-/Users/tombillard/work/fdf_sdl/src/render/panel/panel_cursor.c
-panel.h
-/Users/tombillard/work/fdf_sdl/src/render/panel/panel.h
-
-/Users/tombillard/work/fdf_sdl/src/render/panel/panel_do_slide.c
-panel.h
-/Users/tombillard/work/fdf_sdl/src/render/panel/panel.h
-
-/Users/tombillard/work/fdf_sdl/src/render/panel/panel_draw_circle.c
-panel.h
-/Users/tombillard/work/fdf_sdl/src/render/panel/panel.h
-
-/Users/tombillard/work/fdf_sdl/src/render/panel/panel_get_mouse.c
-panel.h
-/Users/tombillard/work/fdf_sdl/src/render/panel/panel.h
-
-/Users/tombillard/work/fdf_sdl/src/render/panel/panel_line.c
-panel.h
-/Users/tombillard/work/fdf_sdl/src/render/panel/panel.h
-
-/Users/tombillard/work/fdf_sdl/src/render/panel/panel_slide.c
-panel.h
-/Users/tombillard/work/fdf_sdl/src/render/panel/panel.h
-
 /Users/tombillard/work/fdf_sdl/src/render/render.c
 fdf.h
 /Users/tombillard/work/fdf_sdl/src/render/fdf.h
@@ -393,10 +353,6 @@ errno.h
 -
 SDL2/SDL.h
 include/SDL2/SDL.h
-
-include/panel.h
-fdf.h
-include/fdf.h
 
 libft/libft.h
 string.h

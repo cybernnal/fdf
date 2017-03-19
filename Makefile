@@ -48,10 +48,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/tombillard/work/fdf
+CMAKE_SOURCE_DIR = /Users/tombillard/work/fdf_sdl
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/tombillard/work/fdf
+CMAKE_BINARY_DIR = /Users/tombillard/work/fdf_sdl
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/tombillard/work/fdf/CMakeFiles /Users/tombillard/work/fdf/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/tombillard/work/fdf_sdl/CMakeFiles /Users/tombillard/work/fdf_sdl/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/tombillard/work/fdf/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/tombillard/work/fdf_sdl/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -1878,6 +1878,60 @@ src/conv_tab.c.s:
 	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/conv_tab.c.s
 .PHONY : src/conv_tab.c.s
 
+src/draw_pixel.o: src/draw_pixel.c.o
+
+.PHONY : src/draw_pixel.o
+
+# target to build an object file
+src/draw_pixel.c.o:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/draw_pixel.c.o
+.PHONY : src/draw_pixel.c.o
+
+src/draw_pixel.i: src/draw_pixel.c.i
+
+.PHONY : src/draw_pixel.i
+
+# target to preprocess a source file
+src/draw_pixel.c.i:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/draw_pixel.c.i
+.PHONY : src/draw_pixel.c.i
+
+src/draw_pixel.s: src/draw_pixel.c.s
+
+.PHONY : src/draw_pixel.s
+
+# target to generate assembly for a file
+src/draw_pixel.c.s:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/draw_pixel.c.s
+.PHONY : src/draw_pixel.c.s
+
+src/end_func.o: src/end_func.c.o
+
+.PHONY : src/end_func.o
+
+# target to build an object file
+src/end_func.c.o:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/end_func.c.o
+.PHONY : src/end_func.c.o
+
+src/end_func.i: src/end_func.c.i
+
+.PHONY : src/end_func.i
+
+# target to preprocess a source file
+src/end_func.c.i:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/end_func.c.i
+.PHONY : src/end_func.c.i
+
+src/end_func.s: src/end_func.c.s
+
+.PHONY : src/end_func.s
+
+# target to generate assembly for a file
+src/end_func.c.s:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/end_func.c.s
+.PHONY : src/end_func.c.s
+
 src/error.o: src/error.c.o
 
 .PHONY : src/error.o
@@ -1931,6 +1985,330 @@ src/init.s: src/init.c.s
 src/init.c.s:
 	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/init.c.s
 .PHONY : src/init.c.s
+
+src/key_kook/hook_init.o: src/key_kook/hook_init.c.o
+
+.PHONY : src/key_kook/hook_init.o
+
+# target to build an object file
+src/key_kook/hook_init.c.o:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/key_kook/hook_init.c.o
+.PHONY : src/key_kook/hook_init.c.o
+
+src/key_kook/hook_init.i: src/key_kook/hook_init.c.i
+
+.PHONY : src/key_kook/hook_init.i
+
+# target to preprocess a source file
+src/key_kook/hook_init.c.i:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/key_kook/hook_init.c.i
+.PHONY : src/key_kook/hook_init.c.i
+
+src/key_kook/hook_init.s: src/key_kook/hook_init.c.s
+
+.PHONY : src/key_kook/hook_init.s
+
+# target to generate assembly for a file
+src/key_kook/hook_init.c.s:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/key_kook/hook_init.c.s
+.PHONY : src/key_kook/hook_init.c.s
+
+src/key_kook/key_hook.o: src/key_kook/key_hook.c.o
+
+.PHONY : src/key_kook/key_hook.o
+
+# target to build an object file
+src/key_kook/key_hook.c.o:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/key_kook/key_hook.c.o
+.PHONY : src/key_kook/key_hook.c.o
+
+src/key_kook/key_hook.i: src/key_kook/key_hook.c.i
+
+.PHONY : src/key_kook/key_hook.i
+
+# target to preprocess a source file
+src/key_kook/key_hook.c.i:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/key_kook/key_hook.c.i
+.PHONY : src/key_kook/key_hook.c.i
+
+src/key_kook/key_hook.s: src/key_kook/key_hook.c.s
+
+.PHONY : src/key_kook/key_hook.s
+
+# target to generate assembly for a file
+src/key_kook/key_hook.c.s:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/key_kook/key_hook.c.s
+.PHONY : src/key_kook/key_hook.c.s
+
+src/key_kook/key_hook_anim.o: src/key_kook/key_hook_anim.c.o
+
+.PHONY : src/key_kook/key_hook_anim.o
+
+# target to build an object file
+src/key_kook/key_hook_anim.c.o:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/key_kook/key_hook_anim.c.o
+.PHONY : src/key_kook/key_hook_anim.c.o
+
+src/key_kook/key_hook_anim.i: src/key_kook/key_hook_anim.c.i
+
+.PHONY : src/key_kook/key_hook_anim.i
+
+# target to preprocess a source file
+src/key_kook/key_hook_anim.c.i:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/key_kook/key_hook_anim.c.i
+.PHONY : src/key_kook/key_hook_anim.c.i
+
+src/key_kook/key_hook_anim.s: src/key_kook/key_hook_anim.c.s
+
+.PHONY : src/key_kook/key_hook_anim.s
+
+# target to generate assembly for a file
+src/key_kook/key_hook_anim.c.s:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/key_kook/key_hook_anim.c.s
+.PHONY : src/key_kook/key_hook_anim.c.s
+
+src/key_kook/key_hook_blue_color.o: src/key_kook/key_hook_blue_color.c.o
+
+.PHONY : src/key_kook/key_hook_blue_color.o
+
+# target to build an object file
+src/key_kook/key_hook_blue_color.c.o:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/key_kook/key_hook_blue_color.c.o
+.PHONY : src/key_kook/key_hook_blue_color.c.o
+
+src/key_kook/key_hook_blue_color.i: src/key_kook/key_hook_blue_color.c.i
+
+.PHONY : src/key_kook/key_hook_blue_color.i
+
+# target to preprocess a source file
+src/key_kook/key_hook_blue_color.c.i:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/key_kook/key_hook_blue_color.c.i
+.PHONY : src/key_kook/key_hook_blue_color.c.i
+
+src/key_kook/key_hook_blue_color.s: src/key_kook/key_hook_blue_color.c.s
+
+.PHONY : src/key_kook/key_hook_blue_color.s
+
+# target to generate assembly for a file
+src/key_kook/key_hook_blue_color.c.s:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/key_kook/key_hook_blue_color.c.s
+.PHONY : src/key_kook/key_hook_blue_color.c.s
+
+src/key_kook/key_hook_green_color.o: src/key_kook/key_hook_green_color.c.o
+
+.PHONY : src/key_kook/key_hook_green_color.o
+
+# target to build an object file
+src/key_kook/key_hook_green_color.c.o:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/key_kook/key_hook_green_color.c.o
+.PHONY : src/key_kook/key_hook_green_color.c.o
+
+src/key_kook/key_hook_green_color.i: src/key_kook/key_hook_green_color.c.i
+
+.PHONY : src/key_kook/key_hook_green_color.i
+
+# target to preprocess a source file
+src/key_kook/key_hook_green_color.c.i:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/key_kook/key_hook_green_color.c.i
+.PHONY : src/key_kook/key_hook_green_color.c.i
+
+src/key_kook/key_hook_green_color.s: src/key_kook/key_hook_green_color.c.s
+
+.PHONY : src/key_kook/key_hook_green_color.s
+
+# target to generate assembly for a file
+src/key_kook/key_hook_green_color.c.s:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/key_kook/key_hook_green_color.c.s
+.PHONY : src/key_kook/key_hook_green_color.c.s
+
+src/key_kook/key_hook_other.o: src/key_kook/key_hook_other.c.o
+
+.PHONY : src/key_kook/key_hook_other.o
+
+# target to build an object file
+src/key_kook/key_hook_other.c.o:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/key_kook/key_hook_other.c.o
+.PHONY : src/key_kook/key_hook_other.c.o
+
+src/key_kook/key_hook_other.i: src/key_kook/key_hook_other.c.i
+
+.PHONY : src/key_kook/key_hook_other.i
+
+# target to preprocess a source file
+src/key_kook/key_hook_other.c.i:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/key_kook/key_hook_other.c.i
+.PHONY : src/key_kook/key_hook_other.c.i
+
+src/key_kook/key_hook_other.s: src/key_kook/key_hook_other.c.s
+
+.PHONY : src/key_kook/key_hook_other.s
+
+# target to generate assembly for a file
+src/key_kook/key_hook_other.c.s:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/key_kook/key_hook_other.c.s
+.PHONY : src/key_kook/key_hook_other.c.s
+
+src/key_kook/key_hook_panel.o: src/key_kook/key_hook_panel.c.o
+
+.PHONY : src/key_kook/key_hook_panel.o
+
+# target to build an object file
+src/key_kook/key_hook_panel.c.o:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/key_kook/key_hook_panel.c.o
+.PHONY : src/key_kook/key_hook_panel.c.o
+
+src/key_kook/key_hook_panel.i: src/key_kook/key_hook_panel.c.i
+
+.PHONY : src/key_kook/key_hook_panel.i
+
+# target to preprocess a source file
+src/key_kook/key_hook_panel.c.i:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/key_kook/key_hook_panel.c.i
+.PHONY : src/key_kook/key_hook_panel.c.i
+
+src/key_kook/key_hook_panel.s: src/key_kook/key_hook_panel.c.s
+
+.PHONY : src/key_kook/key_hook_panel.s
+
+# target to generate assembly for a file
+src/key_kook/key_hook_panel.c.s:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/key_kook/key_hook_panel.c.s
+.PHONY : src/key_kook/key_hook_panel.c.s
+
+src/key_kook/key_hook_red_color.o: src/key_kook/key_hook_red_color.c.o
+
+.PHONY : src/key_kook/key_hook_red_color.o
+
+# target to build an object file
+src/key_kook/key_hook_red_color.c.o:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/key_kook/key_hook_red_color.c.o
+.PHONY : src/key_kook/key_hook_red_color.c.o
+
+src/key_kook/key_hook_red_color.i: src/key_kook/key_hook_red_color.c.i
+
+.PHONY : src/key_kook/key_hook_red_color.i
+
+# target to preprocess a source file
+src/key_kook/key_hook_red_color.c.i:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/key_kook/key_hook_red_color.c.i
+.PHONY : src/key_kook/key_hook_red_color.c.i
+
+src/key_kook/key_hook_red_color.s: src/key_kook/key_hook_red_color.c.s
+
+.PHONY : src/key_kook/key_hook_red_color.s
+
+# target to generate assembly for a file
+src/key_kook/key_hook_red_color.c.s:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/key_kook/key_hook_red_color.c.s
+.PHONY : src/key_kook/key_hook_red_color.c.s
+
+src/key_kook/key_hook_rot_1.o: src/key_kook/key_hook_rot_1.c.o
+
+.PHONY : src/key_kook/key_hook_rot_1.o
+
+# target to build an object file
+src/key_kook/key_hook_rot_1.c.o:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/key_kook/key_hook_rot_1.c.o
+.PHONY : src/key_kook/key_hook_rot_1.c.o
+
+src/key_kook/key_hook_rot_1.i: src/key_kook/key_hook_rot_1.c.i
+
+.PHONY : src/key_kook/key_hook_rot_1.i
+
+# target to preprocess a source file
+src/key_kook/key_hook_rot_1.c.i:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/key_kook/key_hook_rot_1.c.i
+.PHONY : src/key_kook/key_hook_rot_1.c.i
+
+src/key_kook/key_hook_rot_1.s: src/key_kook/key_hook_rot_1.c.s
+
+.PHONY : src/key_kook/key_hook_rot_1.s
+
+# target to generate assembly for a file
+src/key_kook/key_hook_rot_1.c.s:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/key_kook/key_hook_rot_1.c.s
+.PHONY : src/key_kook/key_hook_rot_1.c.s
+
+src/key_kook/key_hook_rot_2.o: src/key_kook/key_hook_rot_2.c.o
+
+.PHONY : src/key_kook/key_hook_rot_2.o
+
+# target to build an object file
+src/key_kook/key_hook_rot_2.c.o:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/key_kook/key_hook_rot_2.c.o
+.PHONY : src/key_kook/key_hook_rot_2.c.o
+
+src/key_kook/key_hook_rot_2.i: src/key_kook/key_hook_rot_2.c.i
+
+.PHONY : src/key_kook/key_hook_rot_2.i
+
+# target to preprocess a source file
+src/key_kook/key_hook_rot_2.c.i:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/key_kook/key_hook_rot_2.c.i
+.PHONY : src/key_kook/key_hook_rot_2.c.i
+
+src/key_kook/key_hook_rot_2.s: src/key_kook/key_hook_rot_2.c.s
+
+.PHONY : src/key_kook/key_hook_rot_2.s
+
+# target to generate assembly for a file
+src/key_kook/key_hook_rot_2.c.s:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/key_kook/key_hook_rot_2.c.s
+.PHONY : src/key_kook/key_hook_rot_2.c.s
+
+src/key_kook/key_hook_z_scale.o: src/key_kook/key_hook_z_scale.c.o
+
+.PHONY : src/key_kook/key_hook_z_scale.o
+
+# target to build an object file
+src/key_kook/key_hook_z_scale.c.o:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/key_kook/key_hook_z_scale.c.o
+.PHONY : src/key_kook/key_hook_z_scale.c.o
+
+src/key_kook/key_hook_z_scale.i: src/key_kook/key_hook_z_scale.c.i
+
+.PHONY : src/key_kook/key_hook_z_scale.i
+
+# target to preprocess a source file
+src/key_kook/key_hook_z_scale.c.i:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/key_kook/key_hook_z_scale.c.i
+.PHONY : src/key_kook/key_hook_z_scale.c.i
+
+src/key_kook/key_hook_z_scale.s: src/key_kook/key_hook_z_scale.c.s
+
+.PHONY : src/key_kook/key_hook_z_scale.s
+
+# target to generate assembly for a file
+src/key_kook/key_hook_z_scale.c.s:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/key_kook/key_hook_z_scale.c.s
+.PHONY : src/key_kook/key_hook_z_scale.c.s
+
+src/key_kook/key_hook_zoom.o: src/key_kook/key_hook_zoom.c.o
+
+.PHONY : src/key_kook/key_hook_zoom.o
+
+# target to build an object file
+src/key_kook/key_hook_zoom.c.o:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/key_kook/key_hook_zoom.c.o
+.PHONY : src/key_kook/key_hook_zoom.c.o
+
+src/key_kook/key_hook_zoom.i: src/key_kook/key_hook_zoom.c.i
+
+.PHONY : src/key_kook/key_hook_zoom.i
+
+# target to preprocess a source file
+src/key_kook/key_hook_zoom.c.i:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/key_kook/key_hook_zoom.c.i
+.PHONY : src/key_kook/key_hook_zoom.c.i
+
+src/key_kook/key_hook_zoom.s: src/key_kook/key_hook_zoom.c.s
+
+.PHONY : src/key_kook/key_hook_zoom.s
+
+# target to generate assembly for a file
+src/key_kook/key_hook_zoom.c.s:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/key_kook/key_hook_zoom.c.s
+.PHONY : src/key_kook/key_hook_zoom.c.s
 
 src/main.o: src/main.c.o
 
@@ -1986,32 +2364,302 @@ src/parsing.c.s:
 	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/parsing.c.s
 .PHONY : src/parsing.c.s
 
-src/render.o: src/render.c.o
+src/render/color.o: src/render/color.c.o
 
-.PHONY : src/render.o
+.PHONY : src/render/color.o
 
 # target to build an object file
-src/render.c.o:
-	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/render.c.o
-.PHONY : src/render.c.o
+src/render/color.c.o:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/render/color.c.o
+.PHONY : src/render/color.c.o
 
-src/render.i: src/render.c.i
+src/render/color.i: src/render/color.c.i
 
-.PHONY : src/render.i
+.PHONY : src/render/color.i
 
 # target to preprocess a source file
-src/render.c.i:
-	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/render.c.i
-.PHONY : src/render.c.i
+src/render/color.c.i:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/render/color.c.i
+.PHONY : src/render/color.c.i
 
-src/render.s: src/render.c.s
+src/render/color.s: src/render/color.c.s
 
-.PHONY : src/render.s
+.PHONY : src/render/color.s
 
 # target to generate assembly for a file
-src/render.c.s:
-	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/render.c.s
-.PHONY : src/render.c.s
+src/render/color.c.s:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/render/color.c.s
+.PHONY : src/render/color.c.s
+
+src/render/draw_line.o: src/render/draw_line.c.o
+
+.PHONY : src/render/draw_line.o
+
+# target to build an object file
+src/render/draw_line.c.o:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/render/draw_line.c.o
+.PHONY : src/render/draw_line.c.o
+
+src/render/draw_line.i: src/render/draw_line.c.i
+
+.PHONY : src/render/draw_line.i
+
+# target to preprocess a source file
+src/render/draw_line.c.i:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/render/draw_line.c.i
+.PHONY : src/render/draw_line.c.i
+
+src/render/draw_line.s: src/render/draw_line.c.s
+
+.PHONY : src/render/draw_line.s
+
+# target to generate assembly for a file
+src/render/draw_line.c.s:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/render/draw_line.c.s
+.PHONY : src/render/draw_line.c.s
+
+src/render/matrix.o: src/render/matrix.c.o
+
+.PHONY : src/render/matrix.o
+
+# target to build an object file
+src/render/matrix.c.o:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/render/matrix.c.o
+.PHONY : src/render/matrix.c.o
+
+src/render/matrix.i: src/render/matrix.c.i
+
+.PHONY : src/render/matrix.i
+
+# target to preprocess a source file
+src/render/matrix.c.i:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/render/matrix.c.i
+.PHONY : src/render/matrix.c.i
+
+src/render/matrix.s: src/render/matrix.c.s
+
+.PHONY : src/render/matrix.s
+
+# target to generate assembly for a file
+src/render/matrix.c.s:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/render/matrix.c.s
+.PHONY : src/render/matrix.c.s
+
+src/render/panel/admin_panel.o: src/render/panel/admin_panel.c.o
+
+.PHONY : src/render/panel/admin_panel.o
+
+# target to build an object file
+src/render/panel/admin_panel.c.o:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/render/panel/admin_panel.c.o
+.PHONY : src/render/panel/admin_panel.c.o
+
+src/render/panel/admin_panel.i: src/render/panel/admin_panel.c.i
+
+.PHONY : src/render/panel/admin_panel.i
+
+# target to preprocess a source file
+src/render/panel/admin_panel.c.i:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/render/panel/admin_panel.c.i
+.PHONY : src/render/panel/admin_panel.c.i
+
+src/render/panel/admin_panel.s: src/render/panel/admin_panel.c.s
+
+.PHONY : src/render/panel/admin_panel.s
+
+# target to generate assembly for a file
+src/render/panel/admin_panel.c.s:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/render/panel/admin_panel.c.s
+.PHONY : src/render/panel/admin_panel.c.s
+
+src/render/panel/panel_cursor.o: src/render/panel/panel_cursor.c.o
+
+.PHONY : src/render/panel/panel_cursor.o
+
+# target to build an object file
+src/render/panel/panel_cursor.c.o:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/render/panel/panel_cursor.c.o
+.PHONY : src/render/panel/panel_cursor.c.o
+
+src/render/panel/panel_cursor.i: src/render/panel/panel_cursor.c.i
+
+.PHONY : src/render/panel/panel_cursor.i
+
+# target to preprocess a source file
+src/render/panel/panel_cursor.c.i:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/render/panel/panel_cursor.c.i
+.PHONY : src/render/panel/panel_cursor.c.i
+
+src/render/panel/panel_cursor.s: src/render/panel/panel_cursor.c.s
+
+.PHONY : src/render/panel/panel_cursor.s
+
+# target to generate assembly for a file
+src/render/panel/panel_cursor.c.s:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/render/panel/panel_cursor.c.s
+.PHONY : src/render/panel/panel_cursor.c.s
+
+src/render/panel/panel_do_slide.o: src/render/panel/panel_do_slide.c.o
+
+.PHONY : src/render/panel/panel_do_slide.o
+
+# target to build an object file
+src/render/panel/panel_do_slide.c.o:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/render/panel/panel_do_slide.c.o
+.PHONY : src/render/panel/panel_do_slide.c.o
+
+src/render/panel/panel_do_slide.i: src/render/panel/panel_do_slide.c.i
+
+.PHONY : src/render/panel/panel_do_slide.i
+
+# target to preprocess a source file
+src/render/panel/panel_do_slide.c.i:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/render/panel/panel_do_slide.c.i
+.PHONY : src/render/panel/panel_do_slide.c.i
+
+src/render/panel/panel_do_slide.s: src/render/panel/panel_do_slide.c.s
+
+.PHONY : src/render/panel/panel_do_slide.s
+
+# target to generate assembly for a file
+src/render/panel/panel_do_slide.c.s:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/render/panel/panel_do_slide.c.s
+.PHONY : src/render/panel/panel_do_slide.c.s
+
+src/render/panel/panel_draw_circle.o: src/render/panel/panel_draw_circle.c.o
+
+.PHONY : src/render/panel/panel_draw_circle.o
+
+# target to build an object file
+src/render/panel/panel_draw_circle.c.o:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/render/panel/panel_draw_circle.c.o
+.PHONY : src/render/panel/panel_draw_circle.c.o
+
+src/render/panel/panel_draw_circle.i: src/render/panel/panel_draw_circle.c.i
+
+.PHONY : src/render/panel/panel_draw_circle.i
+
+# target to preprocess a source file
+src/render/panel/panel_draw_circle.c.i:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/render/panel/panel_draw_circle.c.i
+.PHONY : src/render/panel/panel_draw_circle.c.i
+
+src/render/panel/panel_draw_circle.s: src/render/panel/panel_draw_circle.c.s
+
+.PHONY : src/render/panel/panel_draw_circle.s
+
+# target to generate assembly for a file
+src/render/panel/panel_draw_circle.c.s:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/render/panel/panel_draw_circle.c.s
+.PHONY : src/render/panel/panel_draw_circle.c.s
+
+src/render/panel/panel_get_mouse.o: src/render/panel/panel_get_mouse.c.o
+
+.PHONY : src/render/panel/panel_get_mouse.o
+
+# target to build an object file
+src/render/panel/panel_get_mouse.c.o:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/render/panel/panel_get_mouse.c.o
+.PHONY : src/render/panel/panel_get_mouse.c.o
+
+src/render/panel/panel_get_mouse.i: src/render/panel/panel_get_mouse.c.i
+
+.PHONY : src/render/panel/panel_get_mouse.i
+
+# target to preprocess a source file
+src/render/panel/panel_get_mouse.c.i:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/render/panel/panel_get_mouse.c.i
+.PHONY : src/render/panel/panel_get_mouse.c.i
+
+src/render/panel/panel_get_mouse.s: src/render/panel/panel_get_mouse.c.s
+
+.PHONY : src/render/panel/panel_get_mouse.s
+
+# target to generate assembly for a file
+src/render/panel/panel_get_mouse.c.s:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/render/panel/panel_get_mouse.c.s
+.PHONY : src/render/panel/panel_get_mouse.c.s
+
+src/render/panel/panel_line.o: src/render/panel/panel_line.c.o
+
+.PHONY : src/render/panel/panel_line.o
+
+# target to build an object file
+src/render/panel/panel_line.c.o:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/render/panel/panel_line.c.o
+.PHONY : src/render/panel/panel_line.c.o
+
+src/render/panel/panel_line.i: src/render/panel/panel_line.c.i
+
+.PHONY : src/render/panel/panel_line.i
+
+# target to preprocess a source file
+src/render/panel/panel_line.c.i:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/render/panel/panel_line.c.i
+.PHONY : src/render/panel/panel_line.c.i
+
+src/render/panel/panel_line.s: src/render/panel/panel_line.c.s
+
+.PHONY : src/render/panel/panel_line.s
+
+# target to generate assembly for a file
+src/render/panel/panel_line.c.s:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/render/panel/panel_line.c.s
+.PHONY : src/render/panel/panel_line.c.s
+
+src/render/panel/panel_slide.o: src/render/panel/panel_slide.c.o
+
+.PHONY : src/render/panel/panel_slide.o
+
+# target to build an object file
+src/render/panel/panel_slide.c.o:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/render/panel/panel_slide.c.o
+.PHONY : src/render/panel/panel_slide.c.o
+
+src/render/panel/panel_slide.i: src/render/panel/panel_slide.c.i
+
+.PHONY : src/render/panel/panel_slide.i
+
+# target to preprocess a source file
+src/render/panel/panel_slide.c.i:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/render/panel/panel_slide.c.i
+.PHONY : src/render/panel/panel_slide.c.i
+
+src/render/panel/panel_slide.s: src/render/panel/panel_slide.c.s
+
+.PHONY : src/render/panel/panel_slide.s
+
+# target to generate assembly for a file
+src/render/panel/panel_slide.c.s:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/render/panel/panel_slide.c.s
+.PHONY : src/render/panel/panel_slide.c.s
+
+src/render/render.o: src/render/render.c.o
+
+.PHONY : src/render/render.o
+
+# target to build an object file
+src/render/render.c.o:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/render/render.c.o
+.PHONY : src/render/render.c.o
+
+src/render/render.i: src/render/render.c.i
+
+.PHONY : src/render/render.i
+
+# target to preprocess a source file
+src/render/render.c.i:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/render/render.c.i
+.PHONY : src/render/render.c.i
+
+src/render/render.s: src/render/render.c.s
+
+.PHONY : src/render/render.s
+
+# target to generate assembly for a file
+src/render/render.c.s:
+	$(MAKE) -f CMakeFiles/fdf.dir/build.make CMakeFiles/fdf.dir/src/render/render.c.s
+.PHONY : src/render/render.c.s
 
 # Help Target
 help:
@@ -2217,21 +2865,93 @@ help:
 	@echo "... src/conv_tab.o"
 	@echo "... src/conv_tab.i"
 	@echo "... src/conv_tab.s"
+	@echo "... src/draw_pixel.o"
+	@echo "... src/draw_pixel.i"
+	@echo "... src/draw_pixel.s"
+	@echo "... src/end_func.o"
+	@echo "... src/end_func.i"
+	@echo "... src/end_func.s"
 	@echo "... src/error.o"
 	@echo "... src/error.i"
 	@echo "... src/error.s"
 	@echo "... src/init.o"
 	@echo "... src/init.i"
 	@echo "... src/init.s"
+	@echo "... src/key_kook/hook_init.o"
+	@echo "... src/key_kook/hook_init.i"
+	@echo "... src/key_kook/hook_init.s"
+	@echo "... src/key_kook/key_hook.o"
+	@echo "... src/key_kook/key_hook.i"
+	@echo "... src/key_kook/key_hook.s"
+	@echo "... src/key_kook/key_hook_anim.o"
+	@echo "... src/key_kook/key_hook_anim.i"
+	@echo "... src/key_kook/key_hook_anim.s"
+	@echo "... src/key_kook/key_hook_blue_color.o"
+	@echo "... src/key_kook/key_hook_blue_color.i"
+	@echo "... src/key_kook/key_hook_blue_color.s"
+	@echo "... src/key_kook/key_hook_green_color.o"
+	@echo "... src/key_kook/key_hook_green_color.i"
+	@echo "... src/key_kook/key_hook_green_color.s"
+	@echo "... src/key_kook/key_hook_other.o"
+	@echo "... src/key_kook/key_hook_other.i"
+	@echo "... src/key_kook/key_hook_other.s"
+	@echo "... src/key_kook/key_hook_panel.o"
+	@echo "... src/key_kook/key_hook_panel.i"
+	@echo "... src/key_kook/key_hook_panel.s"
+	@echo "... src/key_kook/key_hook_red_color.o"
+	@echo "... src/key_kook/key_hook_red_color.i"
+	@echo "... src/key_kook/key_hook_red_color.s"
+	@echo "... src/key_kook/key_hook_rot_1.o"
+	@echo "... src/key_kook/key_hook_rot_1.i"
+	@echo "... src/key_kook/key_hook_rot_1.s"
+	@echo "... src/key_kook/key_hook_rot_2.o"
+	@echo "... src/key_kook/key_hook_rot_2.i"
+	@echo "... src/key_kook/key_hook_rot_2.s"
+	@echo "... src/key_kook/key_hook_z_scale.o"
+	@echo "... src/key_kook/key_hook_z_scale.i"
+	@echo "... src/key_kook/key_hook_z_scale.s"
+	@echo "... src/key_kook/key_hook_zoom.o"
+	@echo "... src/key_kook/key_hook_zoom.i"
+	@echo "... src/key_kook/key_hook_zoom.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
 	@echo "... src/parsing.o"
 	@echo "... src/parsing.i"
 	@echo "... src/parsing.s"
-	@echo "... src/render.o"
-	@echo "... src/render.i"
-	@echo "... src/render.s"
+	@echo "... src/render/color.o"
+	@echo "... src/render/color.i"
+	@echo "... src/render/color.s"
+	@echo "... src/render/draw_line.o"
+	@echo "... src/render/draw_line.i"
+	@echo "... src/render/draw_line.s"
+	@echo "... src/render/matrix.o"
+	@echo "... src/render/matrix.i"
+	@echo "... src/render/matrix.s"
+	@echo "... src/render/panel/admin_panel.o"
+	@echo "... src/render/panel/admin_panel.i"
+	@echo "... src/render/panel/admin_panel.s"
+	@echo "... src/render/panel/panel_cursor.o"
+	@echo "... src/render/panel/panel_cursor.i"
+	@echo "... src/render/panel/panel_cursor.s"
+	@echo "... src/render/panel/panel_do_slide.o"
+	@echo "... src/render/panel/panel_do_slide.i"
+	@echo "... src/render/panel/panel_do_slide.s"
+	@echo "... src/render/panel/panel_draw_circle.o"
+	@echo "... src/render/panel/panel_draw_circle.i"
+	@echo "... src/render/panel/panel_draw_circle.s"
+	@echo "... src/render/panel/panel_get_mouse.o"
+	@echo "... src/render/panel/panel_get_mouse.i"
+	@echo "... src/render/panel/panel_get_mouse.s"
+	@echo "... src/render/panel/panel_line.o"
+	@echo "... src/render/panel/panel_line.i"
+	@echo "... src/render/panel/panel_line.s"
+	@echo "... src/render/panel/panel_slide.o"
+	@echo "... src/render/panel/panel_slide.i"
+	@echo "... src/render/panel/panel_slide.s"
+	@echo "... src/render/render.o"
+	@echo "... src/render/render.i"
+	@echo "... src/render/render.s"
 .PHONY : help
 
 

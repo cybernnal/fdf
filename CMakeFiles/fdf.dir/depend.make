@@ -189,6 +189,14 @@ CMakeFiles/fdf.dir/src/conv_tab.c.o: src/conv_tab.c
 CMakeFiles/fdf.dir/src/conv_tab.c.o: include/fdf.h
 CMakeFiles/fdf.dir/src/conv_tab.c.o: libft/libft.h
 
+CMakeFiles/fdf.dir/src/draw_pixel.c.o: src/draw_pixel.c
+CMakeFiles/fdf.dir/src/draw_pixel.c.o: include/fdf.h
+CMakeFiles/fdf.dir/src/draw_pixel.c.o: libft/libft.h
+
+CMakeFiles/fdf.dir/src/end_func.c.o: src/end_func.c
+CMakeFiles/fdf.dir/src/end_func.c.o: include/fdf.h
+CMakeFiles/fdf.dir/src/end_func.c.o: libft/libft.h
+
 CMakeFiles/fdf.dir/src/error.c.o: src/error.c
 CMakeFiles/fdf.dir/src/error.c.o: include/fdf.h
 CMakeFiles/fdf.dir/src/error.c.o: libft/libft.h
@@ -196,6 +204,54 @@ CMakeFiles/fdf.dir/src/error.c.o: libft/libft.h
 CMakeFiles/fdf.dir/src/init.c.o: src/init.c
 CMakeFiles/fdf.dir/src/init.c.o: include/fdf.h
 CMakeFiles/fdf.dir/src/init.c.o: libft/libft.h
+
+CMakeFiles/fdf.dir/src/key_kook/hook_init.c.o: src/key_kook/hook_init.c
+CMakeFiles/fdf.dir/src/key_kook/hook_init.c.o: include/fdf.h
+CMakeFiles/fdf.dir/src/key_kook/hook_init.c.o: libft/libft.h
+
+CMakeFiles/fdf.dir/src/key_kook/key_hook.c.o: src/key_kook/key_hook.c
+CMakeFiles/fdf.dir/src/key_kook/key_hook.c.o: include/fdf.h
+CMakeFiles/fdf.dir/src/key_kook/key_hook.c.o: libft/libft.h
+
+CMakeFiles/fdf.dir/src/key_kook/key_hook_anim.c.o: src/key_kook/key_hook_anim.c
+CMakeFiles/fdf.dir/src/key_kook/key_hook_anim.c.o: include/fdf.h
+CMakeFiles/fdf.dir/src/key_kook/key_hook_anim.c.o: libft/libft.h
+
+CMakeFiles/fdf.dir/src/key_kook/key_hook_blue_color.c.o: src/key_kook/key_hook_blue_color.c
+CMakeFiles/fdf.dir/src/key_kook/key_hook_blue_color.c.o: include/fdf.h
+CMakeFiles/fdf.dir/src/key_kook/key_hook_blue_color.c.o: libft/libft.h
+
+CMakeFiles/fdf.dir/src/key_kook/key_hook_green_color.c.o: src/key_kook/key_hook_green_color.c
+CMakeFiles/fdf.dir/src/key_kook/key_hook_green_color.c.o: include/fdf.h
+CMakeFiles/fdf.dir/src/key_kook/key_hook_green_color.c.o: libft/libft.h
+
+CMakeFiles/fdf.dir/src/key_kook/key_hook_other.c.o: src/key_kook/key_hook_other.c
+CMakeFiles/fdf.dir/src/key_kook/key_hook_other.c.o: include/fdf.h
+CMakeFiles/fdf.dir/src/key_kook/key_hook_other.c.o: libft/libft.h
+
+CMakeFiles/fdf.dir/src/key_kook/key_hook_panel.c.o: src/key_kook/key_hook_panel.c
+CMakeFiles/fdf.dir/src/key_kook/key_hook_panel.c.o: include/fdf.h
+CMakeFiles/fdf.dir/src/key_kook/key_hook_panel.c.o: libft/libft.h
+
+CMakeFiles/fdf.dir/src/key_kook/key_hook_red_color.c.o: src/key_kook/key_hook_red_color.c
+CMakeFiles/fdf.dir/src/key_kook/key_hook_red_color.c.o: include/fdf.h
+CMakeFiles/fdf.dir/src/key_kook/key_hook_red_color.c.o: libft/libft.h
+
+CMakeFiles/fdf.dir/src/key_kook/key_hook_rot_1.c.o: src/key_kook/key_hook_rot_1.c
+CMakeFiles/fdf.dir/src/key_kook/key_hook_rot_1.c.o: include/fdf.h
+CMakeFiles/fdf.dir/src/key_kook/key_hook_rot_1.c.o: libft/libft.h
+
+CMakeFiles/fdf.dir/src/key_kook/key_hook_rot_2.c.o: src/key_kook/key_hook_rot_2.c
+CMakeFiles/fdf.dir/src/key_kook/key_hook_rot_2.c.o: include/fdf.h
+CMakeFiles/fdf.dir/src/key_kook/key_hook_rot_2.c.o: libft/libft.h
+
+CMakeFiles/fdf.dir/src/key_kook/key_hook_z_scale.c.o: src/key_kook/key_hook_z_scale.c
+CMakeFiles/fdf.dir/src/key_kook/key_hook_z_scale.c.o: include/fdf.h
+CMakeFiles/fdf.dir/src/key_kook/key_hook_z_scale.c.o: libft/libft.h
+
+CMakeFiles/fdf.dir/src/key_kook/key_hook_zoom.c.o: src/key_kook/key_hook_zoom.c
+CMakeFiles/fdf.dir/src/key_kook/key_hook_zoom.c.o: include/fdf.h
+CMakeFiles/fdf.dir/src/key_kook/key_hook_zoom.c.o: libft/libft.h
 
 CMakeFiles/fdf.dir/src/main.c.o: src/main.c
 CMakeFiles/fdf.dir/src/main.c.o: include/fdf.h
@@ -205,7 +261,54 @@ CMakeFiles/fdf.dir/src/parsing.c.o: src/parsing.c
 CMakeFiles/fdf.dir/src/parsing.c.o: include/fdf.h
 CMakeFiles/fdf.dir/src/parsing.c.o: libft/libft.h
 
-CMakeFiles/fdf.dir/src/render.c.o: src/render.c
-CMakeFiles/fdf.dir/src/render.c.o: include/fdf.h
-CMakeFiles/fdf.dir/src/render.c.o: libft/libft.h
+CMakeFiles/fdf.dir/src/render/color.c.o: src/render/color.c
+CMakeFiles/fdf.dir/src/render/color.c.o: include/fdf.h
+CMakeFiles/fdf.dir/src/render/color.c.o: libft/libft.h
+
+CMakeFiles/fdf.dir/src/render/draw_line.c.o: src/render/draw_line.c
+CMakeFiles/fdf.dir/src/render/draw_line.c.o: include/fdf.h
+CMakeFiles/fdf.dir/src/render/draw_line.c.o: libft/libft.h
+
+CMakeFiles/fdf.dir/src/render/matrix.c.o: src/render/matrix.c
+CMakeFiles/fdf.dir/src/render/matrix.c.o: include/fdf.h
+CMakeFiles/fdf.dir/src/render/matrix.c.o: libft/libft.h
+
+CMakeFiles/fdf.dir/src/render/panel/admin_panel.c.o: src/render/panel/admin_panel.c
+CMakeFiles/fdf.dir/src/render/panel/admin_panel.c.o: include/fdf.h
+CMakeFiles/fdf.dir/src/render/panel/admin_panel.c.o: include/panel.h
+CMakeFiles/fdf.dir/src/render/panel/admin_panel.c.o: libft/libft.h
+
+CMakeFiles/fdf.dir/src/render/panel/panel_cursor.c.o: src/render/panel/panel_cursor.c
+CMakeFiles/fdf.dir/src/render/panel/panel_cursor.c.o: include/fdf.h
+CMakeFiles/fdf.dir/src/render/panel/panel_cursor.c.o: include/panel.h
+CMakeFiles/fdf.dir/src/render/panel/panel_cursor.c.o: libft/libft.h
+
+CMakeFiles/fdf.dir/src/render/panel/panel_do_slide.c.o: src/render/panel/panel_do_slide.c
+CMakeFiles/fdf.dir/src/render/panel/panel_do_slide.c.o: include/fdf.h
+CMakeFiles/fdf.dir/src/render/panel/panel_do_slide.c.o: include/panel.h
+CMakeFiles/fdf.dir/src/render/panel/panel_do_slide.c.o: libft/libft.h
+
+CMakeFiles/fdf.dir/src/render/panel/panel_draw_circle.c.o: src/render/panel/panel_draw_circle.c
+CMakeFiles/fdf.dir/src/render/panel/panel_draw_circle.c.o: include/fdf.h
+CMakeFiles/fdf.dir/src/render/panel/panel_draw_circle.c.o: include/panel.h
+CMakeFiles/fdf.dir/src/render/panel/panel_draw_circle.c.o: libft/libft.h
+
+CMakeFiles/fdf.dir/src/render/panel/panel_get_mouse.c.o: src/render/panel/panel_get_mouse.c
+CMakeFiles/fdf.dir/src/render/panel/panel_get_mouse.c.o: include/fdf.h
+CMakeFiles/fdf.dir/src/render/panel/panel_get_mouse.c.o: include/panel.h
+CMakeFiles/fdf.dir/src/render/panel/panel_get_mouse.c.o: libft/libft.h
+
+CMakeFiles/fdf.dir/src/render/panel/panel_line.c.o: src/render/panel/panel_line.c
+CMakeFiles/fdf.dir/src/render/panel/panel_line.c.o: include/fdf.h
+CMakeFiles/fdf.dir/src/render/panel/panel_line.c.o: include/panel.h
+CMakeFiles/fdf.dir/src/render/panel/panel_line.c.o: libft/libft.h
+
+CMakeFiles/fdf.dir/src/render/panel/panel_slide.c.o: src/render/panel/panel_slide.c
+CMakeFiles/fdf.dir/src/render/panel/panel_slide.c.o: include/fdf.h
+CMakeFiles/fdf.dir/src/render/panel/panel_slide.c.o: include/panel.h
+CMakeFiles/fdf.dir/src/render/panel/panel_slide.c.o: libft/libft.h
+
+CMakeFiles/fdf.dir/src/render/render.c.o: src/render/render.c
+CMakeFiles/fdf.dir/src/render/render.c.o: include/fdf.h
+CMakeFiles/fdf.dir/src/render/render.c.o: libft/libft.h
 

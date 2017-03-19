@@ -63,7 +63,7 @@ static void key_handler(SDL_Event event, t_env *env)
         if (event.key.keysym.sym == SDLK_t)
             env->matrix = !env->matrix;
 
-        int n = 5;
+        int n = 25;
         
         if (event.key.keysym.sym == SDLK_1 && env->color.r1 - n >= 0)
             env->color.r1 -= n;

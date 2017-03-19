@@ -40,7 +40,6 @@ void    init_env_step2(t_env *env)
         env->ratio = L_CF(1, 0, env->xmax, 0, WIN_X);
     else
         env->ratio = L_CF(1, 0, env->ymax, 0, WIN_Y);
-    //env->winx = (int) (WIN_X - (env->mod * env->ratio));
 }
 
 int		main(int argc, char  **argv)
