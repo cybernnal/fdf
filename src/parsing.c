@@ -19,7 +19,7 @@ static void		map_size(t_env *env, int fd)
     char	*line;
 
     size = 0;
-    while (get_next_line(fd, &line))
+    while (get_next_line(fd, &line) > 0)
     {
         if (!line)
             break ;
@@ -38,8 +38,8 @@ void			pars_map(t_env *env, char *arg)
     int i;
 
     i = 0;
-    if ((fd = open(arg, O_RDONLY)) < 0)
-        ft_error("open error");
+    if ((fd = open(arg, O_RDONLY)) <= 0)
+        perror("");
     map_size(env, fd);
     if ((close(fd)) != 0)
         ft_error("close fd error");
