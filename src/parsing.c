@@ -19,7 +19,7 @@ static void		map_size(t_env *env, int fd)
 	char	*line;
 
 	size = 0;
-	while (get_next_line(fd, &line))
+	while (get_next_line(fd, &line) > 0)
 	{
 		if (!line)
 			break ;
